@@ -4,7 +4,7 @@ export function theme(){
   const leftPanel = document.getElementById('left-panel');
   const rightScroll = document.getElementById('right-scroll');
   const isMobile = window.innerWidth < 768;
-
+    
   if (isMobile) {
     leftPanel.classList.add('hidden');
     rightScroll.classList.remove('h-screen');
