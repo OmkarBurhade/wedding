@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Wedding of Sameer & Mehak</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        cream: '#f9f5ef',
+        ivory: '#faf7f2',
+        parch: '#f5f0e8',
+        gold: '#c9a96e',
+        'gold-d': '#a8854a',
+        blush: '#e8c4bc',
+        rosedust: '#c9948a',
+        sage: '#9baa94',
+        dust: '#8b7355',
+        warm: '#6b5744',
+        muted: '#a89880',
+      },
+      fontFamily: {
+        script: ['"Great Vibes"', 'cursive'],
+        serif: ['"Cormorant Garamond"', 'serif'],
+        display: ['"Playfair Display"', 'serif'],
+        body: ['Lato', 'sans-serif'],
+      },
+      keyframes: {
+        petalFall: {
+          '0%': { transform: 'translateY(-15px) rotate(0deg)', opacity: '0' },
+          '15%': { opacity: '.85' },
+          '100%': { transform: 'translateY(105vh) rotate(400deg)', opacity: '0' }
+        },
+        floatY: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-8px)' }
+        },
+        pulseSoft: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.03)' }
+        },
+        fadeUp: {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' }
+        }
+      },
+      animation: {
+        petalFall: 'petalFall linear infinite',
+        floatY: 'floatY 4s ease-in-out infinite',
+        pulseSoft: 'pulseSoft 3s ease-in-out infinite',
+        fadeUp: 'fadeUp .9s ease forwards',
+      },
+    }
+  }
+}
+</script>
+</head>
+<body class="min-h-screen w-full overflow-x-hidden bg-ivory font-body text-black">
+
+<div id="opening" class="fixed inset-0 z-50 flex h-screen items-center justify-center overflow-hidden bg-ivory bg-[url('./assets/images/theme-image/banner.jpg')] bg-cover bg-center bg-no-repeat transition-all duration-[900ms]">
+  <div class="absolute inset-0 z-0 bg-black/70"></div>
+
+  <svg class="absolute left-0 top-0 z-[1] w-[170px] opacity-[.17]" viewBox="0 0 170 170" fill="none">
+    <path d="M8,8 Q65,58 115,38 Q75,108 15,162" stroke="#c9a96e" stroke-width="1.5" fill="none"></path>
+  </svg>
+
+  <div class="pointer-events-none absolute inset-0 z-[1] flex items-center justify-center">
+    <div class="absolute h-[500px] w-[500px] rounded-full border border-[#c9a96e]/[.09]"></div>
+    <div class="absolute h-[370px] w-[370px] rounded-full border border-[#c9a96e]/[.12]"></div>
+    <div class="absolute h-[250px] w-[250px] rounded-full border border-[#c9a96e]/[.15]"></div>
+  </div>
+
+  <div class="animate-fadeUp relative z-[2] mx-auto w-full max-w-[400px] px-8 py-10 text-center">
+    <div class="mb-5 flex justify-center animate-floatY">
+      <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+        <circle cx="35" cy="35" r="33" stroke="#c9a96e" stroke-width="1" stroke-dasharray="4 3"></circle>
+        <circle cx="35" cy="35" r="23" stroke="#c9a96e" stroke-width=".5"></circle>
+        <text x="35" y="41" text-anchor="middle" fill="#c9a96e" font-size="22">W</text>
+      </svg>
+    </div>
+
+    <p class="mb-[6px] text-[16px] uppercase tracking-[0.28em] text-[#eee]">You Are Cordially Invited To</p>
+    <p class="mb-[14px] text-[16px] uppercase tracking-[0.22em] text-[#ddd] opacity-70">The Wedding of</p>
+    <h1 class="font-script text-[66px] leading-[1.1] text-gold">Sameer</h1>
+
+    <div class="my-[10px]">
+      <span class="text-[24px] text-gold">&</span>
+    </div>
+
+    <h1 class="font-script text-[66px] leading-[1.1] text-gold">Mehek</h1>
+
+    <div class="my-[18px] inline-block rounded-full border border-[#c9a96e]/40 px-7 py-[7px]">
+      <p class="text-[16px] tracking-[0.22em] text-[#eee]">11 MAY 2026</p>
+    </div>
+
+    <p class="mb-7 text-[16px] italic leading-[1.7] text-[#ddd] opacity-80">
+      "Two souls, one heart - a love story written in the stars."
+    </p>
+
+    <button onclick="openInvitation()" class="rounded-full bg-gold px-[25px] py-[10px] tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-gold-d">
+      Open Invitation
+    </button>
+  </div>
+</div>
+
+<div id="main" class="relative flex flex-col opacity-0 pointer-events-none transition-opacity duration-[900ms] md:flex-row">
+  <div id="left-panel" class="relative hidden h-screen shrink-0 overflow-hidden md:block md:w-[45%] lg:w-[60%]">
+    <img
+      id="left-img"
+      src="./assets/images/theme-image/Img (4).png"
+      alt="Sameer & Mehak"
+      class="block h-full w-full object-cover object-[center_top] transition-transform duration-150 ease-out"
+    />
+
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-black/[0.92] to-transparent"></div>
+    <div class="pointer-events-none absolute inset-4 border border-[#c9a96e]/[.22]"></div>
+
+    <div class="absolute left-1/2 top-1/2 w-full max-w-[600px] -translate-x-1/2 -translate-y-1/2 px-5 text-center">
+      <div class="mx-auto mb-[10px] flex items-center gap-[10px] text-gold opacity-0 will-reveal [animation:fadeUp_.75s_ease_forwards] before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']">
+        <svg width="13" height="13" viewBox="0 0 13 13">
+          <path d="M6.5,1 L8,5.5 L13,5.5 L9,8.5 L10.5,12.5 L6.5,9.5 L2.5,12.5 L4,8.5 L0,5.5 L5,5.5 Z" fill="#c9a96e" opacity=".65"></path>
+        </svg>
+      </div>
+
+      <p class="mb-[6px] text-[16px] uppercase tracking-[0.28em] text-white/85">The Wedding of</p>
+      <h1 class="font-script text-[66px] leading-[1.1] text-gold">Sameer &amp; Mehak</h1>
+
+      <div class="mt-[10px] flex flex-wrap justify-center gap-[14px]">
+        <div class="flex items-center gap-[6px] text-white">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+          </svg>
+          <span class="text-[16px]">11 May 2027</span>
+        </div>
+
+        <div class="flex items-center gap-[6px] text-white">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          </svg>
+          <span class="text-[16px]">Shantiniketan Hill Resort, Srinagar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="right-scroll" class="h-screen w-full shrink-0 overflow-y-auto bg-ivory md:w-[55%] lg:w-[40%]">
+    <div id="mobile-hero" class="block border-b border-[#c9a96e]/[.18] bg-cream px-5 pb-6 pt-8 text-center md:hidden">
+      <img src="./assets/images/theme-image/Img (4).png" alt="" class="mb-[18px] h-[200px] w-full object-cover"/>
+      <p class="mb-1 text-[16px] uppercase tracking-[0.24em] text-muted">The Wedding of</p>
+      <h1 class="font-script text-[48px] text-gold">Sameer &amp; Mehak</h1>
+      <p class="mt-1 text-[16px] text-dust">11 May 2027 · Srinagar</p>
+    </div>
+
+    <div class="relative overflow-hidden bg-[#f6f1eb] px-5 py-16 text-center">
+      <div class="absolute left-[-80px] top-[-80px] h-72 w-72 overflow-hidden rounded-full opacity-40">
+        <img src="./assets/images/theme-image/flowers-image-2.png" class="h-full w-full object-cover sm:w-[180px] md:w-[250px]" alt=""/>
+      </div>
+
+      <div class="absolute bottom-[-80px] right-[-80px] h-72 w-72 overflow-hidden rounded-full opacity-30">
+        <img src="./assets/images/theme-image/flowers-image-3.png" class="h-full w-full object-cover sm:w-[180px] md:w-[250px]" alt=""/>
+      </div>
+
+      <svg class="absolute left-1/2 top-6 -translate-x-1/2 opacity-20" width="180" height="60" viewBox="0 0 200 60" fill="none">
+        <path d="M10 40 C40 10, 160 10, 190 40" stroke="#b89b6a" stroke-width="1.5" fill="none"/>
+      </svg>
+
+      <p class="relative z-10 mb-3 text-xs uppercase tracking-[0.4em] text-[#8b7d6b]">The Wedding Of</p>
+      <h1 class="font-script text-[66px] leading-[1.1] text-gold">Sameer &amp; Mehak</h1>
+
+      <div class="relative z-10 flex justify-center">
+        <div class="absolute h-[440px] w-[320px] rounded-[200px_200px_20px_20px] border border-[#d6b17a] opacity-30"></div>
+
+        <div class="rounded-[200px_200px_20px_20px] bg-gradient-to-b from-[#d6b17a] via-[#f3e5c8] to-transparent p-[3px]">
+          <div class="rounded-[200px_200px_20px_20px] bg-white p-3 shadow-xl">
+            <img
+              src="./assets/images/theme-image/Img (2).jpg"
+              alt="Sameer and Mehak portrait"
+              class="h-[360px] w-[260px] rounded-[180px_180px_20px_20px] object-cover transition duration-500 hover:scale-105 md:h-[420px] md:w-[320px]"
+            />
+          </div>
+        </div>
+
+        <div class="absolute left-0 top-10 h-2 w-2 rounded-full bg-[#d6b17a]"></div>
+        <div class="absolute bottom-10 right-0 h-2 w-2 rounded-full bg-[#b89b6a]"></div>
+      </div>
+
+      <div class="mb-3 mt-10 flex items-center justify-center gap-2">
+        <span class="h-px w-10 bg-[#d6b17a]"></span>
+        <span class="h-2 w-2 rounded-full bg-[#d6b17a]"></span>
+        <span class="h-px w-10 bg-[#d6b17a]"></span>
+      </div>
+
+      <p class="relative z-10 text-sm tracking-[0.25em] text-dust">11 MAY 2027</p>
+
+      <svg class="absolute bottom-4 left-1/2 -translate-x-1/2 opacity-20" width="160" height="50" viewBox="0 0 200 60" fill="none">
+        <path d="M10 20 C60 50, 140 50, 190 20" stroke="#b89b6a" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+
+    <div class="bg-parch px-7 py-[22px] text-center">
+      <svg class="mx-auto mb-2 block opacity-30" width="30" height="22" viewBox="0 0 30 22" fill="none">
+        <path d="M0,15 Q3,2 11,5 Q7,11 9,15 Q7,19 3.5,19 Q0,19 0,15Z" fill="#c9a96e"/>
+        <path d="M15,15 Q18,2 26,5 Q22,11 24,15 Q22,19 18.5,19 Q15,19 15,15Z" fill="#c9a96e"/>
+      </svg>
+      <p class="mx-auto mb-2 max-w-[280px] text-[16px] italic leading-[1.75] text-warm">
+        "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
+      </p>
+    </div>
+
+    <div class="bg-ivory px-7 py-9">
+      <div class="mb-6 text-center">
+        <svg class="mx-auto mb-[10px] block" width="56" height="46" viewBox="0 0 56 46" fill="none">
+          <ellipse cx="28" cy="11" rx="9" ry="5" fill="#e8c4bc" opacity=".6"/>
+          <ellipse cx="16" cy="19" rx="8" ry="4" fill="#c9a96e" opacity=".3" transform="rotate(-28 16 19)"/>
+          <ellipse cx="40" cy="19" rx="8" ry="4" fill="#c9a96e" opacity=".3" transform="rotate(28 40 19)"/>
+          <ellipse cx="7" cy="29" rx="7" ry="3" fill="#e8c4bc" opacity=".38" transform="rotate(-44 7 29)"/>
+          <ellipse cx="49" cy="29" rx="7" ry="3" fill="#e8c4bc" opacity=".38" transform="rotate(44 49 29)"/>
+          <circle cx="28" cy="11" r="2.5" fill="#c9a96e" opacity=".6"/>
+          <line x1="28" y1="16" x2="28" y2="44" stroke="#c9a96e" stroke-width="1" opacity=".22"/>
+        </svg>
+        <p class="mb-1 text-[16px] uppercase tracking-[0.28em] text-muted">Meet</p>
+        <h2 class="font-display text-[30px] italic text-gold">Bride &amp; Groom</h2>
+        <div class="mx-auto mt-2 flex max-w-[145px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+        <p class="mx-auto mt-2 max-w-[300px] text-[16px] leading-[1.7] text-muted">
+          Please join us as we celebrate the beginning of their beautiful journey together
+        </p>
+      </div>
+
+      <div class="mb-6 text-center">
+        <div class="relative mb-3 inline-block">
+          <div class="mx-auto h-[105px] w-[105px] overflow-hidden rounded-full border-[3px] border-gold shadow-[0_0_0_5px_rgba(201,169,110,0.15)]">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Groom" class="block h-full w-full object-cover"/>
+          </div>
+          <div class="absolute inset-[-8px] animate-pulseSoft rounded-full border border-[#c9a96e]/20"></div>
+        </div>
+        <h3 class="mb-[2px] font-script text-[28px] text-gold">Sameer Satish Rana</h3>
+        <p class="mb-[3px] text-[16px] uppercase tracking-[0.18em] text-muted">Son of</p>
+        <p class="text-[16px] text-muted">Mr. Satish Sharma &amp; Mrs. Priya Rana</p>
+        <p class="mt-[2px] text-[16px] text-muted">Shiv Shakti Colony, Srinagar</p>
+        <div class="mt-2">
+          <span class="inline-flex rounded-full border border-[#c9a96e]/55 px-4 py-1 font-serif text-[16px] tracking-[0.1em] text-gold transition hover:bg-gold hover:text-white">Instagram</span>
+        </div>
+      </div>
+
+      <div class="mx-auto my-1 flex max-w-[110px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']">
+        <span class="font-script text-[32px] text-gold">&amp;</span>
+      </div>
+
+      <div class="mt-5 text-center">
+        <div class="relative mb-3 inline-block">
+          <div class="mx-auto h-[105px] w-[105px] overflow-hidden rounded-full border-[3px] border-gold shadow-[0_0_0_5px_rgba(201,169,110,0.15)]">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80" alt="Bride" class="block h-full w-full object-cover"/>
+          </div>
+          <div class="absolute inset-[-8px] rounded-full border border-[#c9a96e]/20 animate-[pulseSoft_3s_ease-in-out_infinite_.5s]"></div>
+        </div>
+        <h3 class="mb-[2px] font-script text-[28px] text-gold">Mehak Pradeep Dhar</h3>
+        <p class="mb-[3px] text-[16px] uppercase tracking-[0.18em] text-muted">Daughter of</p>
+        <p class="text-[16px] text-muted">Mr. Pradeep Dhar &amp; Mrs. Sunita Dhar</p>
+        <p class="mt-[2px] text-[16px] text-muted">Shiv Shakti Colony, Srinagar</p>
+        <div class="mt-2">
+          <span class="inline-flex rounded-full border border-[#c9a96e]/55 px-4 py-1 font-serif text-[16px] tracking-[0.1em] text-gold transition hover:bg-gold hover:text-white">Instagram</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-parch px-7 py-8 text-center">
+      <svg class="mx-auto mb-3 block" width="68" height="38" viewBox="0 0 68 38" fill="none">
+        <ellipse cx="34" cy="10" rx="9" ry="5" fill="#e8c4bc" opacity=".6"/>
+        <ellipse cx="20" cy="18" rx="8" ry="4" fill="#c9a96e" opacity=".28" transform="rotate(-28 20 18)"/>
+        <ellipse cx="48" cy="18" rx="8" ry="4" fill="#c9a96e" opacity=".28" transform="rotate(28 48 18)"/>
+        <ellipse cx="8" cy="28" rx="7" ry="3" fill="#e8c4bc" opacity=".38" transform="rotate(-42 8 28)"/>
+        <ellipse cx="60" cy="28" rx="7" ry="3" fill="#e8c4bc" opacity=".38" transform="rotate(42 60 28)"/>
+        <circle cx="34" cy="10" r="2.5" fill="#c9a96e" opacity=".6"/>
+      </svg>
+      <p class="mb-4 text-[16px] uppercase tracking-[0.25em] text-muted">Counting Down To The Big Day</p>
+      <div class="flex flex-wrap justify-center gap-[10px]">
+        <div class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
+          <span id="cd-d" class="block font-display text-[28px] font-semibold text-gold">415</span>
+          <span class="text-[16px] uppercase tracking-[0.18em] text-muted">Days</span>
+        </div>
+        <div class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
+          <span id="cd-h" class="block font-display text-[28px] font-semibold text-gold">14</span>
+          <span class="text-[16px] uppercase tracking-[0.18em] text-muted">Hours</span>
+        </div>
+        <div class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
+          <span id="cd-m" class="block font-display text-[28px] font-semibold text-gold">39</span>
+          <span class="text-[16px] uppercase tracking-[0.18em] text-muted">Mins</span>
+        </div>
+        <div class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
+          <span id="cd-s" class="block font-display text-[28px] font-semibold text-gold">05</span>
+          <span class="text-[16px] uppercase tracking-[0.18em] text-muted">Secs</span>
+        </div>
+      </div>
+      <button class="mt-5 rounded-full bg-gold px-[26px] py-[9px] font-serif text-[16px] tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-gold-d hover:shadow-[0_6px_20px_rgba(201,169,110,0.3)]">
+        Save The Date
+      </button>
+    </div>
+
+    <div class="bg-ivory px-7 py-9">
+      <div class="mb-5 text-center">
+        <p class="mb-1 text-[16px] uppercase tracking-[0.26em] text-muted">Plan Your Visit</p>
+        <h2 class="font-display text-[24px] italic text-gold">Scheduled</h2>
+        <p class="mx-auto mt-[6px] max-w-[260px] text-[16px] leading-[1.7] text-muted">
+          Celebrate the following events along with us and help us make this time truly special
+        </p>
+        <div class="mx-auto mt-3 flex max-w-[135px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <p class="mb-1 text-[16px] uppercase tracking-[0.16em] text-muted">09 May 2027 · 7 PM</p>
+          <h3 class="mb-1 font-script text-[24px] text-gold">Sangeet</h3>
+          <p class="text-[16px] text-warm">Shankracharya Hill Resort, Srinagar</p>
+        </div>
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <p class="mb-1 text-[16px] uppercase tracking-[0.16em] text-muted">09 May 2027 · 11 PM</p>
+          <h3 class="mb-1 font-script text-[24px] text-gold">Haldi</h3>
+          <p class="text-[16px] text-warm">At Groom's Residence, Srinagar</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-parch px-7 py-9">
+      <div class="mb-5 text-center">
+        <svg class="mx-auto mb-[10px] block" width="72" height="50" viewBox="0 0 72 50" fill="none">
+          <ellipse cx="36" cy="12" rx="10" ry="5.5" fill="#e8c4bc" opacity=".6"/>
+          <ellipse cx="22" cy="21" rx="9" ry="4.5" fill="#c9a96e" opacity=".28" transform="rotate(-28 22 21)"/>
+          <ellipse cx="50" cy="21" rx="9" ry="4.5" fill="#c9a96e" opacity=".28" transform="rotate(28 50 21)"/>
+          <ellipse cx="9" cy="33" rx="8" ry="3.5" fill="#e8c4bc" opacity=".36" transform="rotate(-42 9 33)"/>
+          <ellipse cx="63" cy="33" rx="8" ry="3.5" fill="#e8c4bc" opacity=".36" transform="rotate(42 63 33)"/>
+          <circle cx="36" cy="12" r="3" fill="#c9a96e" opacity=".6"/>
+          <line x1="36" y1="18" x2="36" y2="48" stroke="#c9a96e" stroke-width="1" opacity=".22"/>
+        </svg>
+        <p class="mb-1 text-[16px] uppercase tracking-[0.26em] text-muted">Join Us</p>
+        <h2 class="font-display text-[24px] italic text-gold">Wedding Event</h2>
+        <p class="mx-auto mt-[6px] max-w-[260px] text-[16px] leading-[1.7] text-muted">We gladly invite you to be a part of our special day</p>
+        <div class="mx-auto mt-3 flex max-w-[135px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <p class="mb-[6px] text-[16px] uppercase tracking-[0.15em] text-muted">Wedding Ceremony</p>
+          <h3 class="mb-[6px] font-script text-[21px] text-gold">Holy Matrimony</h3>
+          <div class="mx-auto mb-2 h-px w-7 bg-gold/40"></div>
+          <p class="mb-[2px] text-[16px] text-warm">11 May 2027</p>
+          <p class="mb-3 text-[16px] text-muted">Shankracharya Hill Resort<br/>Srinagar</p>
+          <a href="https://www.google.com/maps?q=Lalit+Grand+Palace+Srinagar&output=embed" data-lity class="mt-5 inline-flex rounded-full border border-[#c9a96e]/55 px-[22px] py-[7px] font-serif text-[16px] tracking-[0.1em] text-gold transition hover:bg-gold hover:text-white">
+            Location
+          </a>
+        </div>
+
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <p class="mb-[6px] text-[16px] uppercase tracking-[0.15em] text-muted">Reception</p>
+          <h3 class="mb-[6px] font-script text-[21px] text-gold">Wedding Reception</h3>
+          <div class="mx-auto mb-2 h-px w-7 bg-gold/40"></div>
+          <p class="mb-[2px] text-[16px] text-warm">11 May 2027</p>
+          <p class="mb-3 text-[16px] text-muted">Lalit Grand Palace<br/>Srinagar</p>
+          <a href="https://www.google.com/maps?q=Lalit+Grand+Palace+Srinagar&output=embed" data-lity class="mt-5 inline-flex rounded-full border border-[#c9a96e]/55 px-[22px] py-[7px] font-serif text-[16px] tracking-[0.1em] text-gold transition hover:bg-gold hover:text-white">
+            Location
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-ivory px-7 py-9">
+      <div class="mb-[18px] text-center">
+        <p class="mb-1 text-[16px] uppercase tracking-[0.26em] text-muted">Our Journey</p>
+        <h2 class="font-display text-[24px] italic text-gold">Our Memories</h2>
+        <div class="mx-auto mt-2 flex max-w-[135px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+      </div>
+
+      <divs class="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+        <a class="gal-item" href="./assets/images/theme-image/Img (2).jpg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (2).jpg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 1">
+        </a>
+        <a class="gal-item" href="./assets/images/theme-image/Img (15).jpeg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (15).jpeg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 2">
+        </a>
+        <a class="gal-item" href="./assets/images/theme-image/Img (13).jpeg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (13).jpeg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 3">
+        </a>
+        <a class="gal-item" href="./assets/images/theme-image/Img (9).jpeg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (9).jpeg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 4">
+        </a>
+        <a class="gal-item" href="./assets/images/theme-image/Img (9).jpg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (9).jpg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 5">
+        </a>
+        <a class="gal-item" href="./assets/images/theme-image/Img (16).jpg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (16).jpg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 6">
+        </a>
+        <a class="gal-item" href="./assets/images/theme-image/Img (3).jpeg" data-fancybox="gallery">
+          <img src="./assets/images/theme-image/Img (3).jpeg" class="h-28 w-full rounded-lg object-cover md:h-40" loading="lazy" alt="Memory 7">
+        </a>
+      </divs>
+    </div>
+
+    <div class="relative overflow-hidden bg-parch px-7 py-9">
+      <div class="mb-5 text-center">
+        <p class="mb-1 text-[16px] uppercase tracking-[0.26em] text-muted">Share Your Love</p>
+        <h2 class="font-display text-[24px] italic text-gold">Wedding Wishes</h2>
+        <div class="mx-auto mt-2 flex max-w-[135px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+      </div>
+
+      <div class="mx-auto grid max-w-[1200px] align-item:self-start grid-cols-1 gap-3 md:grid-cols-1 align-items: self-start;">
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white p-[18px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <p class="mb-[14px] text-center text-[16px] text-warm">Leave your wishes</p>
+          <div class="flex flex-col gap-[9px]">
+            <input type="text" placeholder="Name" class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"/>
+            <input type="email" placeholder="Email" class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"/>
+            <textarea placeholder="Your wish..." rows="3" class="w-full resize-none rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"></textarea>
+            <button class="rounded-full bg-gold px-[34px] py-2 font-serif text-[16px] tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-gold-d hover:shadow-[0_6px_20px_rgba(201,169,110,0.3)]">Send</button>
+          </div>
+        </div>
+
+        <div id="wishes_wrapper" class="self-start space-y-4 h-[350px] overflow-y-auto pr-2">
+          <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <strong class="mb-1 block">Nilesh</strong>
+            <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#aa8a7a]">Jakarta</span>
+            <p>Congratulations on starting a new life together. May you always support each other and be filled with happiness.</p>
+          </article>
+          <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <strong class="mb-1 block">Aditya</strong>
+            <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#aa8a7a]">Bandung</span>
+            <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
+          </article>
+          <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <strong class="mb-1 block">Aditya</strong>
+            <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#aa8a7a]">Bandung</span>
+            <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
+          </article>
+          <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <strong class="mb-1 block">Aditya</strong>
+            <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#aa8a7a]">Bandung</span>
+            <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
+          </article>
+          <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <strong class="mb-1 block">Aditya</strong>
+            <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#aa8a7a]">Bandung</span>
+            <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative bg-ivory px-7 py-9">
+      <svg class="absolute right-2 top-2 w-[75px] opacity-[.18]" viewBox="0 0 90 90" fill="none">
+        <path d="M85,5 Q48,48 28,68 Q58,48 78,85" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
+        <ellipse cx="48" cy="48" rx="9" ry="4.5" fill="#e8c4bc" opacity=".5" transform="rotate(22 48 48)"/>
+      </svg>
+      <div class="mb-5 text-center">
+        <p class="mb-1 text-[16px] uppercase tracking-[0.26em] text-muted">Can't Make It?</p>
+        <h2 class="font-display text-[24px] italic text-gold">Join Us Virtually</h2>
+        <p class="mt-[5px] text-[16px] leading-[1.7] text-muted">Celebrate with us from wherever you are</p>
+        <div class="mx-auto mt-2 flex max-w-[135px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-[14px] py-5 text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div class="mx-auto mb-[10px] flex h-[38px] w-[38px] items-center justify-center rounded-full bg-gold/10">
+            <svg width="18" height="18" fill="none" stroke="#c9a96e" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <p class="mb-1 text-[16px] uppercase tracking-[0.14em] text-muted">Live Stream</p>
+          <h3 class="mb-2 font-display text-[16px] italic text-gold">Live Streaming</h3>
+          <p class="mb-3 text-[16px] leading-[1.6] text-warm">Watch the ceremony live from anywhere</p>
+          <a href="https://www.youtube.com/watch?v=D0UnqGm_miA" data-lity class="mt-5 inline-flex rounded-full border border-[#c9a96e]/55 px-[22px] py-[7px] font-serif text-[16px] tracking-[0.1em] text-gold transition hover:bg-gold hover:text-white">
+            WEDMEMORIES
+          </a>
+        </div>
+
+        <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-[14px] py-5 text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div class="mx-auto mb-[10px] flex h-[38px] w-[38px] items-center justify-center rounded-full bg-blush/20">
+            <svg width="18" height="18" fill="none" stroke="#c9948a" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <p class="mb-1 text-[16px] uppercase tracking-[0.14em] text-muted">Moments</p>
+          <h3 class="mb-2 font-display text-[16px] italic text-gold">Wed Memories</h3>
+          <p class="mb-3 text-[16px] leading-[1.6] text-warm">Upload &amp; share your captured moments</p>
+          <a href="https://drive.google.com/uc?export=download&amp;id=FILE_ID" class="mt-5 inline-flex rounded-full border border-[#c9a96e]/55 px-[22px] py-[7px] font-serif text-[16px] tracking-[0.1em] text-gold transition hover:bg-gold hover:text-white">
+            VIEW ALBUM
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative bg-parch px-7 py-9">
+      <svg class="absolute left-2 top-2 w-[75px] opacity-[.18]" viewBox="0 0 90 90" fill="none">
+        <path d="M5,5 Q42,42 62,62 Q38,42 22,85" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
+        <ellipse cx="42" cy="42" rx="9" ry="4.5" fill="#e8c4bc" opacity=".5" transform="rotate(-22 42 42)"/>
+      </svg>
+      <div class="mb-5 text-center">
+        <p class="mb-1 text-[16px] uppercase tracking-[0.26em] text-muted">Will You Join Us?</p>
+        <h2 class="font-display text-[30px] italic text-gold">RSVP</h2>
+        <p class="mt-[3px] text-[16px] text-muted">Please confirm your attendance by 01 May 2027</p>
+        <div class="mx-auto mt-2 flex max-w-[135px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']"></div>
+      </div>
+
+      <div class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-[18px] py-[22px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+        <div class="flex flex-col gap-[11px]">
+          <input type="text" placeholder="Your Full Name" class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"/>
+          <input type="email" placeholder="Email Address" class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"/>
+          <input type="tel" placeholder="Phone Number" class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"/>
+
+          <div class="grid grid-cols-1 gap-[10px] sm:grid-cols-2">
+            <div>
+              <label class="mb-1 block pl-1 text-[16px] text-muted">Guest Name</label>
+              <input type="text" placeholder="Plus one" class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"/>
+            </div>
+            <div>
+              <label class="mb-1 block pl-1 text-[16px] text-muted">No. of Guests</label>
+              <select class="w-full rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+            </div>
+          </div>
+
+          <div>
+            <label class="mb-[6px] block pl-1 text-[16px] text-muted">Attending</label>
+            <div class="mt-5 grid grid-cols-2 gap-3">
+              <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#e3d3c8] bg-white p-3 text-muted transition hover:bg-[#fbf5f0]">
+                <input type="checkbox" name="event[]" value="Haldi" class="scale-110 accent-[#b27d6b]">
+                <span class="text-muted">Haldi</span>
+              </label>
+              <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#e3d3c8] bg-white p-3 text-muted transition hover:bg-[#fbf5f0]">
+                <input type="checkbox" name="event[]" value="Sangeet" class="scale-110 accent-[#b27d6b]">
+                <span class="text-muted">Sangeet</span>
+              </label>
+              <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#e3d3c8] bg-white p-3 text-muted transition hover:bg-[#fbf5f0]">
+                <input type="checkbox" name="event[]" value="Wedding" class="scale-110 accent-[#b27d6b]">
+                <span class="text-muted">Wedding</span>
+              </label>
+              <label class="flex cursor-pointer items-center gap-2 rounded-xl border border-[#e3d3c8] bg-white p-3 text-muted transition hover:bg-[#fbf5f0]">
+                <input type="checkbox" name="event[]" value="Reception" class="scale-110 accent-[#b27d6b]">
+                <span class="text-muted">Reception</span>
+              </label>
+            </div>
+          </div>
+
+          <textarea placeholder="Any special message..." rows="2" class="w-full resize-none rounded-lg border border-[#c9a96e]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#b09878] focus:border-gold focus:shadow-[0_0_0_3px_rgba(201,169,110,0.12)]"></textarea>
+
+          <div class="pt-1 text-center">
+            <button class="rounded-full bg-gold px-[34px] py-[10px] font-serif text-[16px] tracking-[0.18em] text-white transition hover:-translate-y-0.5 hover:bg-gold-d hover:shadow-[0_6px_20px_rgba(201,169,110,0.3)]">
+              Send RSVP
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative overflow-hidden bg-ivory px-7 pb-9 pt-10 text-center">
+      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=800&q=80" alt="" class="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[.07]"/>
+      <svg class="absolute bottom-0 left-0 w-[90px] opacity-[.18]" viewBox="0 0 90 90" fill="none">
+        <path d="M5,85 Q38,52 62,38 Q46,66 84,12" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
+        <ellipse cx="48" cy="52" rx="9" ry="4.5" fill="#e8c4bc" opacity=".5" transform="rotate(18 48 52)"/>
+      </svg>
+      <svg class="absolute bottom-0 right-0 w-[90px] scale-x-[-1] opacity-[.18]" viewBox="0 0 90 90" fill="none">
+        <path d="M5,85 Q38,52 62,38 Q46,66 84,12" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
+        <ellipse cx="48" cy="52" rx="9" ry="4.5" fill="#e8c4bc" opacity=".5" transform="rotate(18 48 52)"/>
+      </svg>
+
+      <div class="relative z-[1]">
+        <p class="mb-[10px] text-[16px] uppercase tracking-[0.26em] text-muted">With Love &amp; Gratitude</p>
+        <h2 class="mb-[10px] font-script text-[42px] text-gold">Sameer &amp; Mehak</h2>
+        <div class="mx-auto mb-4 flex max-w-[125px] items-center gap-[10px] text-gold before:h-px before:flex-1 before:bg-gold/30 before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']">
+          <svg width="11" height="11" viewBox="0 0 11 11"><path d="M5.5,1 L6.8,4.5 L10.5,4.5 L7.5,6.8 L8.5,10.5 L5.5,8.2 L2.5,10.5 L3.5,6.8 L.5,4.5 L4.2,4.5 Z" fill="#c9a96e" opacity=".5"/></svg>
+        </div>
+        <p class="mx-auto mb-5 max-w-[230px] text-[16px] italic leading-[1.75] text-warm opacity-80">
+          "Thank you for being part of our love story. Your presence makes our day complete."
+        </p>
+        <div class="mb-5 flex justify-center gap-[10px]">
+          <a href="#" class="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#c9a96e]/40 text-gold transition hover:bg-gold hover:text-white">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#c9a96e]/40 text-gold transition hover:bg-gold hover:text-white">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+        <p class="text-[16px] text-muted opacity-50">Made with for Sameer &amp; Mehak · 2027</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="petals" class="fixed inset-0 z-[9999] hidden overflow-hidden pointer-events-none"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.min.js"></script>
+<script>
+  AOS.init();
+</script>
+<script type="module" src="assets/js/main.js"></script>
+<script>
+(function tick(){
+  const diff = new Date('2027-05-11T10:00:00').getTime() - Date.now();
+  if (diff > 0) {
+    document.getElementById('cd-d').textContent = String(Math.floor(diff / 864e5)).padStart(3, '0');
+    document.getElementById('cd-h').textContent = String(Math.floor((diff % 864e5) / 36e5)).padStart(2, '0');
+    document.getElementById('cd-m').textContent = String(Math.floor((diff % 36e5) / 6e4)).padStart(2, '0');
+    document.getElementById('cd-s').textContent = String(Math.floor((diff % 6e4) / 1e3)).padStart(2, '0');
+  }
+  setTimeout(tick, 1000);
+})();
+
+function setInvitationLayout() {
+  const body = document.body;
+  const leftPanel = document.getElementById('left-panel');
+  const rightScroll = document.getElementById('right-scroll');
+  const isMobile = window.innerWidth < 768;
+
+  if (isMobile) {
+    leftPanel.classList.add('hidden');
+    rightScroll.classList.remove('h-screen');
+    rightScroll.classList.add('h-auto');
+    body.classList.remove('overflow-hidden');
+    body.classList.add('overflow-auto');
+  } else {
+    leftPanel.classList.remove('hidden');
+    rightScroll.classList.remove('h-auto');
+    rightScroll.classList.add('h-screen');
+    body.classList.remove('overflow-auto');
+    body.classList.add('overflow-hidden');
+
+    document.querySelectorAll('.will-reveal').forEach((el, i) => {
+      el.style.animation = `fadeUp 0.75s ease ${i * 0.12}s forwards`;
+    });
+  }
+}
+
+function openInvitation() {
+  const opening = document.getElementById('opening');
+  const main = document.getElementById('main');
+
+  opening.classList.add('pointer-events-none', 'scale-[1.04]', 'opacity-0');
+
+  setTimeout(() => {
+    opening.classList.add('hidden');
+    main.classList.remove('opacity-0', 'pointer-events-none');
+    main.classList.add('opacity-100', 'pointer-events-auto');
+    setInvitationLayout();
+    setTimeout(spawnPetals, 700);
+  }, 860);
+}
+
+function spawnPetals() {
+  const container = document.getElementById('petals');
+  container.classList.remove('hidden');
+
+  if (container.childElementCount > 0) return;
+
+  const colors = ['#e8c4bc', '#c9a96e', '#f0ddd4', '#deb8b0', '#e0cba8', '#eac9c0'];
+
+  for (let i = 0; i < 16; i++) {
+    const petal = document.createElement('div');
+    petal.className = 'pointer-events-none fixed top-[-20px] z-[9999] rounded-[50%_50%_50%_0] animate-petalFall';
+
+    const size = 6 + Math.random() * 7;
+    petal.style.left = `${Math.random() * 100}vw`;
+    petal.style.width = `${size}px`;
+    petal.style.height = `${size * 1.45}px`;
+    petal.style.background = colors[Math.floor(Math.random() * colors.length)];
+    petal.style.opacity = `${0.35 + Math.random() * 0.5}`;
+    petal.style.animationDuration = `${7 + Math.random() * 8}s`;
+    petal.style.animationDelay = `${Math.random() * 14}s`;
+    container.appendChild(petal);
+  }
+}
+
+const rightScroll = document.getElementById('right-scroll');
+const leftImg = document.getElementById('left-img');
+
+if (rightScroll && leftImg) {
+  rightScroll.addEventListener('scroll', () => {
+    const frac = rightScroll.scrollTop / Math.max(1, rightScroll.scrollHeight - rightScroll.clientHeight);
+    leftImg.style.transform = `translateY(${frac * -28}px) scale(1.035)`;
+  }, { passive: true });
+}
+
+window.addEventListener('resize', () => {
+  const main = document.getElementById('main');
+  const isActive = main.classList.contains('opacity-100');
+  if (!isActive) return;
+  setInvitationLayout();
+});
+</script>
+</body>
+</html>
