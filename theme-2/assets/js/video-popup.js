@@ -1,19 +1,22 @@
-export function videoPopup(){
-    
-const videoBtn = document.getElementById("videoBtn");
-const videoPopup = document.getElementById("videoPopup");
-const closePopup = document.getElementById("closePopup");
-const video = document.getElementById("popupVideo");
+export function videoPopup() {
+  const videoButton = document.getElementById("videoBtn");
+  const popup = document.getElementById("videoPopup");
+  const closeButton = document.getElementById("closePopup");
+  const video = document.getElementById("popupVideo");
 
-videoBtn.onclick = () => {
-  videoPopup.classList.remove("hidden");
-  videoPopup.classList.add("flex");
-  video.play();
-}
+  if (!videoButton || !popup || !closeButton || !video) {
+    return;
+  }
 
-closePopup.onclick = () => {
-  videoPopup.classList.add("hidden");
-  video.pause();
-}
+  videoButton.addEventListener("click", () => {
+    popup.classList.remove("hidden");
+    popup.classList.add("flex");
+    video.play();
+  });
 
+  closeButton.addEventListener("click", () => {
+    popup.classList.add("hidden");
+    popup.classList.remove("flex");
+    video.pause();
+  });
 }

@@ -29,7 +29,15 @@ export function initMusicPlayer() {
     audio.pause();
     syncIcon();
   });
+document.querySelector('#btn-envelope').addEventListener('click', async ()=>{
+  if (audio.paused) {
+      await playAudio();
+      return;
+    }
 
+    audio.pause();
+    syncIcon();
+})
   document.addEventListener("invitation:opened", playAudio);
   audio.addEventListener("play", syncIcon);
   audio.addEventListener("pause", syncIcon);

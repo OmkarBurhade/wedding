@@ -7,6 +7,7 @@ import { initMapToggles } from "./map-toggle.js";
 import { initMusicPlayer } from "./music.js";
 import { initRsvpForm } from "./rsvp-form.js";
 import { initScrollProgress } from "./scroll-progress.js";
+import { theme } from "./theme-2.js";
 import { videoPopup } from "./video-popup.js";
 import { initWishesForm } from "./wishes-form.js";
 
@@ -22,4 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initWishesForm();
   initLangToggle();
   videoPopup();
+  theme()
 });
