@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vidi & Hening digital wedding invitation clone">
+  <title>vivahub Wedding Invitation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- gallery css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.css"/>
+  <!-- aos animation css -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: "#e3dcd0",
+            blush: "#b57b6d",
+            ink: "#5b4a43"
+          },
+          boxShadow: {
+            card: "0 20px 50px rgba(85, 57, 45, 0.12)"
+          }
+        }
+      }
+    };
+  </script>
+  
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-sand text-ink antialiased">
+
+  <div class="scroll-progress js-scroll-progress"></div>
+
+  <div class="fixed bottom-0 right-0 z-50 m-4 flex">
+    <button id="musicControl" class="flex h-14 w-14 items-center justify-center rounded-full bg-blush text-white shadow-card transition hover:scale-105" aria-label="Toggle music">
+      <i id="playPause" class="fa-solid fa-play"></i>
+    </button>
+  </div>
+
+  <nav class="fixed left-0 top-0 z-40 w-full bg-sand shadow-md">
+    <div class="mx-auto flex max-w-6xl justify-center px-4 py-5">
+      <a href="#sectionMain" class="nav-brand-text text-black">Aarambh &amp; Swara</a>
+    </div>
+  </nav>
+
+  <section id="sectionMain" class="fixed z-[100] w-full flex min-h-screen items-center justify-center overflow-hidden envelope-wrap">
+    <div class="absolute inset-0">
+      <img src="assets/images/theme-image/hero-banner.jpg" alt="envelope-image" class="h-full w-full object-cover">
+    </div>
+    <div data-aos="zoom-out" data-aos-delay="50" data-aos-duration="1000" class="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center text-white">
+      <p class="mb-4 text-sm uppercase tracking-[0.35em] sm:text-base">We invite you to The Wedding of</p>
+      <h1 class="cover-title mb-8">Aarambh  &amp; Swara</h1>
+      <button id="btn-envelope" class="inline-flex items-center gap-3 rounded-full border border-white/60 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-white backdrop-blur-sm transition hover:bg-white hover:text-ink">
+        <span>Open the Invitation</span>
+        <i class="fas fa-envelope-open-text"></i>
+      </button>
+    </div>
+  </section>
+
+  <main id="mainContent" class="relative -z-10">
+    <section class="relative flex min-h-screen items-center justify-center overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="assets/images/theme-image/hero-banner.jpg" alt="bg-header" class="h-full w-full object-cover">
+      </div>
+      <svg class="waves-bottom text-sand" width="1440" height="75" viewBox="0 0 1440 75" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M335.5 3C158 3 67.1165 20.3333 0 29V75H1440V0C1344 14.1667 1099.61 42.5 890.045 42.5C628.09 42.5 540 3 335.5 3Z" fill="currentColor"/></svg>
+      <div class="relative z-10 mx-auto max-w-4xl px-6 py-24 text-center text-white">
+        <p class="text-xl [text-shadow:2px_2px_10px_rgba(0,0,0,0.5)]">Our Wedding Day</p>
+        
+        <!-- Bride and groom name  -->
+        <h1 class="mt-4 main-title [text-shadow:2px_2px_10px_rgba(0,0,0,0.5)]">Aarambh &amp; Swara</h1>
+        
+        <!-- wedding data -->
+        <p class="inline-flex items-center mt-2 rounded-full px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] transition bg-white text-ink">11 February 2027</p>
+      
+      </div>
+      <div class="mouse-scroll">
+        <span class="mouse-arrow"></span>
+        <span class="mouse-arrow delay-150"></span>
+        <span class="mouse-arrow delay-300"></span>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-[#E3DCD0] px-4 py-24 sm:px-6 lg:px-8">
+      
+      <div class="section-shell">
+        <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image.png" alt="rose-1 secondary" class="decor decor-rose-1 top-[-3rem] left-[-4rem] lg:left-[-10rem]">
+        <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image.png" alt="rose-1 " class="decor decor-rose-1b top-[8rem] right-[-4rem] lg:right-[-8rem]">
+        <div  class="mx-auto mb-16 max-w-3xl text-center">
+          <div data-aos="zoom-out"  data-aos-duration="1000" class="title-section"><h2>Bride &amp; Groom</h2></div>
+          <!-- Bride / Groom description -->
+          <p data-aos="zoom-out"  data-aos-duration="1000">We cordially invite you and your family to grace our Wedding Ceremony with your presence.</p>
+        </div>
+        <div class="grid gap-12 lg:grid-cols-[1fr_auto_1fr] lg:items-stretch">
+          <article class="text-center">
+            <div data-aos="zoom-out"  data-aos-duration="1000" class="mx-auto mb-6 aspect-[4/5] max-w-[360px] p-3">
+              <!-- Groom's image -->
+ 
+              <div class="h-full w-full" style="
+                  background-image: url('assets/images/theme-image/groom.avif');
+                  background-size: cover;
+                  -webkit-mask-image: url('assets/images/theme-image/photo-shape.png');
+                  -webkit-mask-repeat: no-repeat;
+                  -webkit-mask-size: contain;
+                  -webkit-mask-position: center;
+                  mask-image: url('assets/images/theme-image/photo-shape.png');
+                  mask-repeat: no-repeat;
+                  mask-size: contain;
+                  mask-position: center;"></div>
+
+            </div>
+
+            
+            <h3 class="person-title">Aarambh Deshmukh </h3> <!-- Groom's name -->
+            <p class="mb-2 text-sm uppercase tracking-[0.2em]">Precious Son of</p>
+            <p class="text-lg">Mr. Tushar Deshmukh</p> <!-- Groom's father's name -->
+            <p class="my-1 text-xl font-['Great_Vibes',cursive]">&amp;</p>
+            <p class="text-lg">Mrs. Kalyani Deshmukh</p> <!-- Groom's Mother's name -->
+            <a href="https://instagram.com/" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm text-blush transition hover:opacity-80">
+              <i class="fab fa-instagram"></i>
+              <span>Aarambh</span>
+            </a>
+          </article>
+          <div class="flex items-center justify-center">
+            <h3 data-aos="zoom-out" data-aos-duration="2000" class="text-6xl text-[#9c6a5f] font-['Great_Vibes',cursive] sm:text-7xl">&amp;</h3>
+          </div>
+          <article class="text-center">
+            <div class="mx-auto mb-6 aspect-[4/5] max-w-[360px] ">
+               <div data-aos="zoom-out"  data-aos-duration="1000" class="h-full w-full" style="
+                  background-image: url('assets/images/theme-image/bride-image.jpg');
+                  background-size: cover;
+                  -webkit-mask-image: url('assets/images/theme-image/photo-shape.png');
+                  -webkit-mask-repeat: no-repeat;
+                  -webkit-mask-size: contain;
+                  -webkit-mask-position: center;
+                  mask-image: url('assets/images/theme-image/photo-shape.png');
+                  mask-repeat: no-repeat;
+                  mask-size: contain;
+                  mask-position: center;"></div>
+            </div>
+            <h3 class="person-title">Swara Patil</h3> <!-- Bride's name -->
+            <p class="mb-2 text-sm uppercase tracking-[0.2em]">Lovely Daughter of</p>
+            <p class="text-lg">Mr. Vilas Patil</p> <!-- Bride's father's name -->
+            <p class="my-1 text-xl font-['Great_Vibes',cursive]">&amp;</p>
+            <p class="text-lg">Mrs. Snehal Patil</p> <!-- Bride's mother's name -->
+            <a href="https://instagram.com/" target="_blank" rel="noreferrer" class="mt-6 inline-flex items-center gap-2 text-sm text-blush transition hover:opacity-80">
+              <i class="fab fa-instagram"></i>
+              <span>Swara</span>
+            </a>
+          </article>
+        </div>
+        <div class="relative mx-auto mt-40 max-w-2xl text-center">
+          <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image-3.png" alt="tree-1" class="left-[-2rem] top-[-3rem] w-[140px] z-[-1] decor decor-tree-1">
+          <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image-3.png" alt="tree-1 secondary" class="right-[-2rem] bottom-[-3rem] w-[130px] z-[-1] rotate-[166deg] decor decor-tree-1b scale-reverse">
+          <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image-2.png" alt="rose-2" class="decor z-[-1] hidden md:block right-[6rem] lg:right-[16rem] top-[-5rem] w-[140] decor-rose-2">
+          <div class="rounded-[2rem] bg-[#fffaf7] p-8 shadow-card">
+            <div class="countdown mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4" data-date="2027-05-08T08:00:00+07:00">
+              <div><p class="count-number" data-unit="days">00</p><p class="count-label">Days</p></div>
+              <div><p class="count-number" data-unit="hours">00</p><p class="count-label">Hours</p></div>
+              <div><p class="count-number" data-unit="minutes">00</p><p class="count-label">Mins</p></div>
+              <div><p class="count-number" data-unit="seconds">00</p><p class="count-label">Secs</p></div>
+            </div>
+
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=The+Wedding+of+Vidi+%26+Hening&dates=20270508T080000%2F20270508T100000&ctz=Asia%2FJakarta" target="_blank" rel="noreferrer" class="btn-primary">Save the Date</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8">
+      <div class="section-shell">
+        <div class="relative rounded-[2.5rem] ">
+          <img src="assets/images/theme-image/banner-image.jpg" alt="bg-story" class="h-[420px] w-full object-cover sm:h-[520px]">
+          <img src="assets/images/theme-image/flowers-image-3.png" alt="tree-1" class="decor decor-story-tree left-[-1rem] bottom-[-2rem] z-[1] rotate-[247deg] lg:rotate-[240deg] lg:left-[-3rem] lg:w-[200px] object-cover">
+          <img src="assets/images/theme-image/flowers-image-3.png" alt="rose-3" class="decor decor-story-rose right-[-2rem] top-[-2rem] z-[1] lg:w-[200px] object-cover rotate-[247deg] lg:rotate-[70deg]">
+          <svg class="waves-top text-white scale-y-[-1] top-0" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+          <svg class="waves-bottom -bottom-1 text-white" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+        </div>
+       
+      </div>
+    </section> -->
+
+    <section  class="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8">
+      <div class="section-shell">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <div data-aos="zoom-out"  data-aos-duration="1000" class="title-section"><h2>Scheduled</h2></div>
+          <p data-aos="zoom-out"  data-aos-duration="1000">Celebrate the pre-wedding moments with us in an intimate setting filled with music, color, and family warmth.</p>
+        </div>
+        <div class="schedule-grid">
+          <article data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="schedule-card">
+            <div class="schedule-pill">11 Feb. 2027 | 09:30 pm</div>
+            <h3 class="schedule-title">Sangeet</h3>
+            <p class="schedule-location">At : Garden, Grand Royal Lawns, Pune.</p>
+          </article>
+          <article data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="schedule-card">
+            <div class="schedule-pill">11 Feb. 2027 | 04:15 pm</div>
+            <h3 class="schedule-title">Haldi</h3>
+            <p class="schedule-location">At : Garden, Grand Royal Lawns, Pune.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-[#fbf5f0] px-4 py-24 sm:px-6 lg:px-8">
+
+      <img data-aos="zoom-out" data-aos-duration="1500" src="assets/images/theme-image/flowers-image.png" alt="rose-1 secondary" class="decor decor-rose-1 top-[0rem] lg:top-[5rem] left-[-2rem] lg:left-[2rem] xl:left-[12rem] 2xl:left-[18rem]">
+      <img data-aos="zoom-out" data-aos-duration="1500" src="assets/images/theme-image/flowers-image.png" alt="rose-1 secondary" class="decor decor-rose-1 top-[0rem] lg:top-[5rem] right-[-2rem] lg:right-[2rem] xl:right-[12rem] 2xl:right-[18rem]">
+
+      <svg class="waves-top text-white rotate-[180deg]" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <svg class="waves-bottom text-white" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <div class="section-shell">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <div data-aos="zoom-out"  data-aos-duration="1000" class="title-section mb-0"><h2>Wedding Event</h2></div>
+          <!-- wedding ceremony description -->
+          <p data-aos="zoom-out"  data-aos-duration="1000">With gratitude, we invite you to attend and be part of our special moments.</p>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-2 items-start">
+          <article data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="rounded-[2rem] bg-white p-8 text-center shadow-card">
+            <div class="mb-6">
+              <h4 class="mb-6 text-4xl font-['Great_Vibes',cursive]">Wedding Ceremony</h4>
+              <!-- date and day -->
+              <h5 class="text-lg font-medium">Saturday, 11 Feb. 2027</h5>
+              <!-- time -->
+              <p>04:15 pm</p>
+            </div>
+           
+            <div class="text-lg">
+              <!-- hotel / lawns name -->
+              <h4 class="mb-6 font-medium text-2xl">Royal Lawns</h4>
+              <!-- hotel lawns address -->
+              <p>At : Garden, Grand Royal Lawns, Pune.</p>
+            </div>
+            <button class="btn-primary mt-6 js-map-toggle" data-target="map-1">Location</button>
+            <!-- google map -->
+            <div id="map-1" class="map-panel">
+              <iframe class="h-[328px] w-full rounded-[1.5rem] border-0" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Hotel%20Shangri-La%20Jakarta&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" loading="lazy"></iframe>
+            </div>
+          </article>
+          <article data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" class="rounded-[2rem] bg-white p-8 text-center shadow-card">
+            <div class="mb-6">
+              <h4 class="mb-6 text-4xl font-['Great_Vibes',cursive]">Reception</h4>
+              <!-- date and day -->
+              <h5 class="text-lg font-medium">Saturday, 12 Feb. 2027</h5>
+              <!-- time -->
+              <p>07:20 pm</p>
+            </div>
+            <div class="text-lg">
+              <!-- hotel / lawns name -->
+              <h4 class="mb-6 font-medium text-2xl">Aathvan Lawns</h4>
+              <!-- hotel lawns address -->
+              <p>At : Aathvan Lawns, Tapovan, Panchavati, Nashik.</p>
+            </div>
+            <button class="btn-primary mt-6 js-map-toggle" data-target="map-2">Location</button>
+            <!-- google map -->
+            <div id="map-2" class="map-panel">
+              <iframe class="h-[328px] w-full rounded-[1.5rem] border-0" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Hotel%20Shangri-La%20Jakarta&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" loading="lazy"></iframe>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white px-4 py-24 sm:px-6 lg:px-8">
+      <div class="section-shell">
+        <div data-aos="zoom-out"  data-aos-duration="1000" class="title-section text-center"><h2>Our Memories</h2></div>
+         <div data-aos="fade-up" class="gallery-grid mt-12">
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=70&auto=format&fit=crop"
+                alt="Burning Horizon"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=70&auto=format&fit=crop"
+                alt="Starfall"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&q=70&auto=format&fit=crop"
+                alt="Veil Falls"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=800&q=70&auto=format&fit=crop"
+                alt="Ancient Canopy"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=70&auto=format&fit=crop"
+                alt="Stone & Sky"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=800&q=70&auto=format&fit=crop"
+                alt="Arctic Glow"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=70&auto=format&fit=crop"
+                alt="Starfall"
+                loading="lazy" />
+          </a>
+
+          <a class="gal-item"
+            href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=70&auto=format&fit=crop"
+            data-fancybox="gallery">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=70&auto=format&fit=crop"
+                alt="Stone & Sky"
+                loading="lazy" />
+          </a>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-sand px-4 py-24 sm:px-6 lg:px-8">
+      <svg class="waves-top text-white rotate-[180deg]" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <svg class="waves-bottom text-white" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <div class="section-shell">
+        <div class="grid gap-12 lg:grid-cols-[minmax(0,560px)_1fr]">
+          <div class="relative">
+            <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image-3.png" alt="tree-1" class="decor decor-wishes-tree left-[-3rem] top-[-3rem] z-[-1]">
+            <img data-aos="zoom-out"  data-aos-duration="1500" src="assets/images/theme-image/flowers-image-3.png" alt="rose-6" class="decor decor-wishes-rose right-[-3rem] bottom-[-4rem] z-[-1] scale-reverse">
+            <div data-aos="fade-out"  data-aos-duration="1500" class="rounded-[2rem] bg-white p-8 shadow-card sm:p-10">
+              <div class="title-section"><h2>Wedding Wishes</h2></div>
+              <form id="wishForm" class="space-y-4">
+                <input type="text" name="name" placeholder="Name" class="form-field" required>
+                <input type="text" name="address" placeholder="Address" class="form-field">
+                <textarea name="comment" rows="5" placeholder="Write your wishes" class="form-field resize-none" required></textarea>
+                <button type="submit" class="btn-primary w-full">Send</button>
+              </form>
+            </div>
+          </div>
+          <div id="wishes_wrapper" data-aos="fade-out"  data-aos-duration="1500" class="space-y-4 self-start"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8">
+      <img src="assets/images/theme-image/flowers-image.png" alt="tree-1" class="decor decor-gift-tree left-[-2rem] bottom-[3rem] rotate-[240deg] md:rotate-[90deg] lg:left-[-4rem]">
+      <img src="assets/images/theme-image/flowers-image-2.png" alt="rose-2" class="decor decor-gift-rose right-[-3rem] top-[0rem]">
+      <div class="section-shell">
+        <div class="rounded-[2.5rem] bg-[#fffaf7] p-8 shadow-card sm:p-12">
+          <div class="mx-auto max-w-3xl text-center">
+            <div class="title-section"><h2>E-Envelope</h2></div>
+          </div>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <button class="tab-button is-active" data-tab-target="angpaoPane">E-Angpao</button>
+            <button class="tab-button" data-tab-target="giftPane">Gift Registry</button>
+          </div>
+          <div class="mt-10">
+            <div id="angpaoPane" class="tab-panel">
+              <div class="mx-auto max-w-3xl text-center">
+                <p>Bapak/Ibu/Saudara sekalian dapat memberikan hadiah digital kepada kami melalui form dibawah. Bagi yang telah mengisi dan memberikan hadiah kepada kami, kami mengucapkan banyak terimakasih.</p>
+                <button id="openAngpao" class="btn-primary mt-6 w-full sm:w-1/2">Send Gift</button>
+                <form id="giftForm" class="mt-8 hidden space-y-4 text-left">
+                  <div class="grid gap-4 md:grid-cols-2">
+                    <input type="text" name="name" placeholder="Name" class="form-field" required>
+                    <input type="email" name="email" placeholder="Email" class="form-field" required>
+                    <input type="tel" name="phone" placeholder="Mobile Phone" class="form-field" required>
+                    <input type="text" name="address" placeholder="Address" class="form-field" required>
+                  </div>
+                  <div class="relative">
+                    <span class="pointer-events-none absolute left-5 top-1/2 -translate-y-1/2 text-sm uppercase tracking-[0.2em] text-[#b89d90]">Rp</span>
+                    <input type="number" min="10000" max="100000000" name="payment" class="form-field pl-14" placeholder="Amount" required>
+                  </div>
+                  <label class="flex items-center justify-center gap-3 text-sm">
+                    <input type="checkbox" value="1" name="anonymous" class="h-4 w-4 rounded border-[#d8c4b7] text-blush focus:ring-blush">
+                    <span>Show as Anonymous</span>
+                  </label>
+                  <button type="submit" class="btn-primary w-full sm:w-auto">Send Gift</button>
+                </form>
+                <div id="giftMessage" class="form-message hidden"></div>
+              </div>
+            </div>
+            <div id="giftPane" class="tab-panel hidden">
+              <div class="mx-auto max-w-3xl text-center">
+                <p>Anda bisa memberikan hadiah melalui website ini. Klik Hadiahkan, lalu isi data pengirim untuk detail selanjutnya.</p>
+              </div>
+              <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <article class="gift-card">
+                  <img src="assets/images/dinnerware-set.webp" alt="dinnerware-set" class="gift-image">
+                  <div class="gift-content">
+                    <h5>Dinnerware Set</h5>
+                    <button class="btn-primary w-full js-gift-cta">Give as a Gift</button>
+                  </div>
+                </article>
+                <article class="gift-card">
+                  <img src="assets/images/spring-bed.webp" alt="spring-bed" class="gift-image">
+                  <div class="gift-content">
+                    <h5>Spring Bed</h5>
+                    <button class="btn-primary w-full js-gift-cta">Give as a Gift</button>
+                  </div>
+                </article>
+                <article class="gift-card">
+                  <img src="assets/images/dining-chair.webp" alt="dining-chair" class="gift-image">
+                  <div class="gift-content">
+                    <h5>Dining Chair</h5>
+                    <button class="btn-primary w-full js-gift-cta">Give as a Gift</button>
+                  </div>
+                </article>
+                <article class="gift-card">
+                  <img src="assets/images/vacuum-cleaner.webp" alt="vacuum-cleaner" class="gift-image">
+                  <div class="gift-content">
+                    <h5>Vacuum Cleaner</h5>
+                    <button class="btn-primary w-full js-gift-cta">Give as a Gift</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="relative overflow-hidden bg-[#fbf5f0] px-4 py-20 sm:px-6 lg:px-8">
+      <svg class="waves-top text-white rotate-[180deg]" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <svg class="waves-bottom text-white" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <img src="assets/images/theme-image/flowers-image-2.png" alt="rose-7" class="decor decor-virtual-rose-left bottom-8">
+      <img src="assets/images/theme-image/flowers-image-3.png" alt="rose-5" class="decor decor-virtual-rose-right">
+      <img src="assets/images/theme-image/flowers-image-4.png" alt="tree-1" class="decor decor-virtual-tree">
+      <div class="section-shell">
+        <div class="virtual-shell">
+          <div class="virtual-intro">
+            <div data-aos="zoom-out" data-aos-duration="1000" class="title-section mb-6 text-center"><h2>Join Us Virtually</h2></div>
+            <p data-aos="zoom-out" data-aos-duration="1000" class="virtual-description">Celebrate our love story through live streaming and exclusive wedding photos.</p>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000" class="virtual-grid">
+            <article class="virtual-card virtual-card-live">
+              <div class="virtual-label">Streaming</div>
+              <h3 class="virtual-title">Live Streaming</h3>
+              <p class="virtual-copy">Join our ceremony live on YouTube and celebrate each heartfelt moment with us from wherever you are.</p>
+              <div class="virtual-meta">
+                <span>Wedding Ceremony</span>
+                <span>10:00 AM Onwards</span>
+              </div>
+              <div class="virtual-frame">
+                <div class="relative w-full overflow-hidden pt-[56.25%]">
+                  <iframe class="absolute inset-0 h-full w-full border-0" src="https://youtu.be/JLnycPtolfw?si=LGd5Fq-hcLJRxiPl" title="Live wedding stream" allowfullscreen></iframe>
+                </div>
+              </div>
+              <a href="https://youtu.be/JLnycPtolfw?si=LGd5Fq-hcLJRxiPl" target="_blank" rel="noreferrer" class="btn-primary mt-8 inline-flex">Join Youtube</a>
+            </article>
+            <article class="virtual-card virtual-card-memory">
+              <div class="virtual-label">Memories</div>
+              <h3 class="virtual-title">WedMemories</h3>
+              <p class="virtual-copy">A simple keepsake film filled with candid moments, wedding highlights, and beautiful memories to relive with us.</p>
+              <div class="virtual-meta">
+                <span>Exclusive Wedding Film</span>
+                <span>Photos &amp; Moments</span>
+              </div>
+              <div class="virtual-frame">
+                <div class="relative w-full overflow-hidden pt-[56.25%]">
+                  <iframe class="absolute inset-0 h-full w-full border-0" src="https://youtu.be/JLnycPtolfw?si=LGd5Fq-hcLJRxiPl" title="WedMemories video" allowfullscreen></iframe>
+                </div>
+              </div>
+              <a href="https://youtu.be/JLnycPtolfw?si=LGd5Fq-hcLJRxiPl" target="_blank" rel="noreferrer" class="btn-primary mt-8 inline-flex">Watch Memories</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8">
+      <img src="assets/images/theme-image/flowers-image-3.png" alt="rose-4" class="decor decor-rsvp-rose-4 z-[2]">
+      <img src="assets/images/theme-image/flowers-image-4.png" alt="rose-5" class="decor decor-rsvp-rose-5 z-[2]">
+      <div data-aos="fade-up" data-aos-duration="1000" class="section-shell max-w-4xl">
+        <div  class="mx-auto rounded-[2rem] bg-[#fffaf7] p-8 shadow-card sm:p-12">
+          <div class="title-section"><h2>RSVP</h2></div>
+          <form id="rsvpForm" class="mx-auto max-w-xl space-y-4">
+            <input type="text" name="name" class="form-field" placeholder="Name" required>
+            <input type="tel" name="phone" class="form-field" placeholder="Phone Number" required>
+            <input type="number" name="guests" class="form-field" placeholder="Number of Guest" min="1" max="100" required>
+            <select name="status" class="form-field" required>
+              <option value="" selected disabled>Confirmation of Attendance</option>
+              <option value="Attend">Attend</option>
+              <option value="Not Attend">Not Attend</option>
+            </select>
+            <button type="submit" class="btn-primary w-full">Send</button>
+          </form>
+          <div id="rsvpMessage" class="form-message hidden"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="bg-sand px-4 py-24 sm:px-6 lg:px-8">
+      <div class="section-shell">
+        <div class="title-section mb-10 text-center"><h2>Live Streaming</h2></div>
+        <div class="mx-auto max-w-4xl rounded-[2rem] bg-white/90 p-8 text-center shadow-card sm:p-12">
+          <h3 class="mb-3 text-2xl">Susunan Acara Live Wedding</h3>
+          <p class="mb-6">10.00 - Acara Pernikahan</p>
+          <h3 class="mb-3 text-2xl">Live Wedding</h3>
+          <p class="mx-auto mb-8 max-w-2xl">Silahkan menonton melalui YouTube Live mempelai untuk menyaksikan serangkaian acara pernikahan secara Live.</p>
+          <div class="overflow-hidden rounded-[2rem] shadow-card">
+            <div class="relative w-full overflow-hidden pt-[56.25%]">
+              <iframe class="absolute inset-0 h-full w-full border-0" src="https://www.youtube.com/embed/SzPrFMFqFwM" title="Live wedding stream" allowfullscreen></iframe>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/watch/SzPrFMFqFwM" target="_blank" rel="noreferrer" class="btn-primary mt-8 inline-flex">Join Youtube</a>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="thank-section relative flex min-h-[85vh] items-center justify-center overflow-hidden px-4 py-24 text-white sm:px-6 lg:px-8">
+      <img src="assets/images/background-3.webp" alt="bg-thank" class="absolute inset-0 h-full w-full object-cover">
+      <svg class="waves-top text-white top-[-2px] rotate-[180deg] z-[10]" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.385 25.3753C1188.05 6.42287 1372.24 3.30462 1440.5 4.11455V60H-0.5V0C116.5 0 287.924 22.9455 343 25.3753C398.076 27.8052 759.054 49.0659 997.385 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.385 33.0198C1188.05 18.2517 1372.24 15.8219 1440.5 16.453V60.0001H-0.5V13.2468C116.5 13.2468 287.924 31.1265 343 33.0198C398.076 34.9132 759.054 51.48 997.385 33.0198Z" fill="currentColor"/></svg>
+      <svg class="waves-bottom -bottom-1 text-sand z-[10]" width="1440" height="60" viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M997.885 25.3753C1188.55 6.42287 1372.74 3.30462 1441 4.11455V60H0V0C117 0 288.424 22.9455 343.5 25.3753C398.576 27.8052 759.554 49.0659 997.885 25.3753Z" fill="currentColor" fill-opacity="0.6"/><path d="M997.885 33.0198C1188.55 18.2516 1372.74 15.8218 1441 16.4529V60H0V13.2468C117 13.2468 288.424 31.1264 343.5 33.0198C398.576 34.9131 759.554 51.48 997.885 33.0198Z" fill="currentColor"/></svg>
+      <div class="relative z-10 mx-auto max-w-3xl text-center">
+        <div data-aos="zoom-out"  data-aos-duration="1000" class="title-section title-section-light"><h2>- Regards -</h2></div>
+        <p data-aos="zoom-out"  data-aos-duration="1000">Kami mengucapkan terimakasih kepada Bapak/Ibu/Saudara yang telah menghadiri seluruh rangkaian acara pernikahan kami. Semoga waktu yang diberikan menjadi berkah dan manfaat yang kelak dibalas oleh Tuhan Yang Maha Esa.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="mainFooter" class=" bg-sand px-4 py-5 flex flex-col gap-2 text-center text-sm text-ink justify-center items-center">
+    <p>Designed by</p>
+    <h4 class="inline-flex w-fit items-center justify-center gap-3 pb-2 border-b-2 border-[#9c6a5f]">Aarambh Design Studio <i class="fab fa-instagram "></i></h4>
+    <img src="assets/images/theme-image/logo.webp" class="w-44 object-cover" alt="logo">
+    <div class="inline-flex gap-4 items-center justify-center mt-2">
+      <a href="https://www.instagram.com/aarambhdesignstudio" target="_blank" rel="noopener noreferrer">
+        <i class="text-2xl fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/aarambhdesignstudio" target="_blank" rel="noopener noreferrer">
+        <i class="text-2xl fab fa-whatsapp"></i>
+      </a>
+      <a href="https://dribbble.com/aarambhdesignstudio" target="_blank" rel="noopener noreferrer">
+        <i class="text-2xl fab fa-dribbble"></i>
+      </a>
+    </div>
+  </footer>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="assets/audio/bg-music-2.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- gallery js -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5/dist/fancybox/fancybox.umd.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
