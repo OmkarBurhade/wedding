@@ -1,0 +1,42 @@
+  select.goog-te-combo{
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 6px;
+  }
+  .decor {
+  --flower-base-transform: translate3d(0, 0, 0) rotate(0deg);
+  pointer-events: none !important;
+  user-select: none;
+  transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: flowerFloat 2.4s ease-in-out infinite alternate !important;
+}
+.slide-1,
+.slide-2,
+.slide-3{
+  opacity:0;
+  transition:opacity 0.6s ease;
+}
+
+.slide-1.show,
+.slide-2.show,
+.slide-3.show{
+  opacity:1;
+}
+.clip-path {
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    width: 360px;
+    height: 380px;
+    margin: auto;
+    object-fit: cover;
+}
+@keyframes flowerFloat {
+  0% {
+    transform: var(--flower-base-transform) translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: var(--flower-base-transform) translate3d(6px, -8px, 0) rotate(1.5deg);
+  }
+}
