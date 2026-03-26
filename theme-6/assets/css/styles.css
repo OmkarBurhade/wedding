@@ -1,0 +1,10 @@
+.nav-brand-text, .cover-title, .main-title, .person-title, .title-section h2 {
+    font-family: "Great Vibes", cursive;
+}
+
+
+  select.goog-te-combo{
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 6px;
+  }
