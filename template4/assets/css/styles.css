@@ -1,0 +1,40 @@
+  html, body{
+    scroll-behavior: smooth !important;
+  }
+
+  #right-scroll {
+    scroll-behavior: smooth !important;
+  }
+  
+  select.goog-te-combo{
+    width: 100%;
+    padding: 12px 8px;
+    border-radius: 6px;
+  }
+  .decor {
+  --flower-base-transform: translate3d(0, 0, 0) rotate(0deg);
+  pointer-events: none !important;
+  user-select: none;
+  transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
+  animation: flowerFloat 2.4s ease-in-out infinite alternate !important;
+}
+
+@keyframes flowerFloat {
+  0% {
+    transform: var(--flower-base-transform) translate3d(0, 0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: var(--flower-base-transform) translate3d(6px, -8px, 0) rotate(1.5deg);
+  }
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 2px rgba(39, 39, 39, 0.33)
+}
+
+.text-shadow-lg {
+  text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.8);
+}
