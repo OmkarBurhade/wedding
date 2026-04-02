@@ -14,8 +14,8 @@ function formatTime(seconds) {
 export function initAudioPlayer() {
   const backgroundAudio = document.querySelector("#bgMusic");
   const blessingAudio = document.querySelector("#blessingAudio");
-  const musicControl = document.querySelector("#musicControl");
-  const musicControlIcon = document.querySelector("#playPause");
+  const musicControl = document.querySelectorAll("#musicControl");
+  const musicControlIcon = document.querySelectorAll("#playPause");
   const openPlayerButton = document.querySelector("#audioPlayerBtn");
   const popup = document.querySelector("#audioPopup");
   const closePopupButton = document.querySelector("#closeAudioPopup");
@@ -51,22 +51,31 @@ export function initAudioPlayer() {
 
   // The floating music button controls the background track that starts with the invitation.
   const syncBackgroundAudioUi = () => {
-    musicControlIcon.className = backgroundAudio.paused ? "fa-solid fa-play" : "fa-solid fa-pause";
+    musicControlIcon.forEach((e) => {
+      e.className = backgroundAudio.paused
+        ? "fa-solid fa-volume-xmark"
+        : "fa-solid fa-volume-high";
+    });
   };
 
   // The popup player manages a separate blessing track with its own playback state and seek controls.
   const syncUi = () => {
     const isPaused = blessingAudio.paused;
     const iconClassName = isPaused ? "fa-solid fa-play" : "fa-solid fa-pause";
-    const duration = Number.isFinite(blessingAudio.duration) ? blessingAudio.duration : 0;
-    const currentTime = Number.isFinite(blessingAudio.currentTime) ? blessingAudio.currentTime : 0;
+    const duration = Number.isFinite(blessingAudio.duration)
+      ? blessingAudio.duration
+      : 0;
+    const currentTime = Number.isFinite(blessingAudio.currentTime)
+      ? blessingAudio.currentTime
+      : 0;
     const progress = duration > 0 ? `${(currentTime / duration) * 100}%` : "0%";
 
     popupPlayPauseIcon.className = iconClassName;
     currentTimeLabel.textContent = formatTime(currentTime);
     durationLabel.textContent = formatTime(duration);
     progressBar.style.width = progress;
-    seekInput.value = duration > 0 ? String((currentTime / duration) * 100) : "0";
+    seekInput.value =
+      duration > 0 ? String((currentTime / duration) * 100) : "0";
   };
 
   const playBackgroundAudio = async () => {
@@ -148,11 +157,14 @@ export function initAudioPlayer() {
     syncUi();
   };
 
-  musicControl.addEventListener("click", toggleBackgroundAudio);
+  musicControl.forEach((e) => {
+    e.addEventListener("click", toggleBackgroundAudio);
+  });
   popupPlayPauseButton.addEventListener("click", toggleBlessingAudio);
 
   openPlayerButton.addEventListener("click", async () => {
     openPopup();
+
     await playBlessingAudio();
     syncUi();
   });
@@ -166,7 +178,10 @@ export function initAudioPlayer() {
   });
 
   backwardButton.addEventListener("click", () => {
-    blessingAudio.currentTime = Math.max(blessingAudio.currentTime - SEEK_STEP_SECONDS, 0);
+    blessingAudio.currentTime = Math.max(
+      blessingAudio.currentTime - SEEK_STEP_SECONDS,
+      0,
+    );
     syncUi();
   });
 
@@ -175,7 +190,10 @@ export function initAudioPlayer() {
       return;
     }
 
-    blessingAudio.currentTime = Math.min(blessingAudio.currentTime + SEEK_STEP_SECONDS, blessingAudio.duration);
+    blessingAudio.currentTime = Math.min(
+      blessingAudio.currentTime + SEEK_STEP_SECONDS,
+      blessingAudio.duration,
+    );
     syncUi();
   });
 

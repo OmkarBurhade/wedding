@@ -41,7 +41,7 @@
 
 /* Custom seek slider styling keeps the draggable thumb centered on the visual progress track. */
 .audio-seek-slider {
-  accent-color: #e7007f;
+  accent-color: #fff;
 }
 
 .audio-seek-slider::-webkit-slider-runnable-track {
@@ -55,16 +55,16 @@
   width: 20px;
   height: 20px;
   margin-top: -7px;
-  border: 2px solid #e7007f;
+  border: 2px solid #fff;
   border-radius: 9999px;
-  background: #e7007f;
-  box-shadow: 0 4px 14px rgba(231, 0, 127, 0.28);
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.233);
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .audio-seek-slider::-webkit-slider-thumb:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(231, 0, 127, 0.34);
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.285);
 }
 
 .audio-seek-slider::-moz-range-track {
