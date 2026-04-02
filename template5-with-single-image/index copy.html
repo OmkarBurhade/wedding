@@ -187,7 +187,7 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
       "Two souls, one heart - a love story written in the stars."
     </p>
 
-    <button id="btn-envelope" class="rounded-md bg-[#733ca4] px-[25px] py-[10px] tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[#662f97]">
+    <button id="btn-envelope" class="rounded-full bg-[#733ca4] px-[25px] py-[10px] tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[#662f97]">
       Open Invitation
     </button>
   </div>
@@ -195,44 +195,77 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
 
 <div id="main" class="relative flex flex-col opacity-0 pointer-events-none transition-opacity duration-[900ms] md:flex-row">
 
-  <div class="fixed flex flex-col justify-between gap-8 md:gap-16 right-6 bottom-10 md:right-[42%] md:top-10 z-50 ">
+  <div class="pointer-events-none fixed bottom-0 flex flex-col w-full h-screen justify-between items-end gap-8 md:gap-16 px-2  md:right-[42%] z-50 py-5">
 
-    <button id="open-translate" class="flex items-center p-3 rounded-full border border-white shadow-sm bg-[#662f97] transition">
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 48 48" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g data-name="31 - 40"><path d="M41 17H23a5.006 5.006 0 0 0-5 5v12a5.006 5.006 0 0 0 5 5h10.086l4.353 4.354A1.5 1.5 0 0 0 40 42.293V39h1a5.006 5.006 0 0 0 5-5V22a5.006 5.006 0 0 0-5-5zm-4 9.5h-.559a8.973 8.973 0 0 1-2.661 5.434 6.949 6.949 0 0 0 2.72.566 1.031 1.031 0 0 1 1.036 1 .97.97 0 0 1-.965 1 9.127 9.127 0 0 1-4.551-1.23 8.932 8.932 0 0 1-4.52 1.23 1.031 1.031 0 0 1-1.036-1 .97.97 0 0 1 .965-1 7.128 7.128 0 0 0 2.811-.574 8.855 8.855 0 0 1-1.875-2.573 1 1 0 1 1 1.806-.857 6.974 6.974 0 0 0 1.823 2.352A6.96 6.96 0 0 0 34.42 26.5H27a1 1 0 0 1 0-2h4v-2a1 1 0 0 1 2 0v2h4a1 1 0 0 1 0 2zM16 14.417 14.371 18h2.893c.072-.1.149-.2.227-.3z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M25 6H7a5.006 5.006 0 0 0-5 5v12a5.006 5.006 0 0 0 5 5h1v3.293a1.5 1.5 0 0 0 2.561 1.061L14.914 28H16v-6a6.956 6.956 0 0 1 .3-2h-2.838l-1.552 3.414a1 1 0 0 1-1.82-.828l5-11a1 1 0 0 1 1.82 0l2.117 4.657A6.952 6.952 0 0 1 23 15h7v-4a5.006 5.006 0 0 0-5-5z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path></g></g></svg>
+    <button id="musicControl" class="pointer-events-auto flex absolute z-10 sm:hidden bottom-32 right-2 h-14 w-14 items-center justify-center rounded-full shadow-lg bg-white text-[var(--color-primary)] hover:scale-110 transition" aria-label="Toggle music">
+      <!-- <i id="playPause" class="fa-solid fa-play"></i> -->
+      <i id="playPause" class="fa-solid fa-volume-high"></i>
     </button>
+    
+    <button id="open-translate" class="pointer-events-auto flex w-fit items-center p-3 rounded-full border border-white shadow-sm bg-[var(--color-primary)] transition">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" x="0" y="0" viewBox="0 0 48 48" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><g data-name="31 - 40"><path d="M41 17H23a5.006 5.006 0 0 0-5 5v12a5.006 5.006 0 0 0 5 5h10.086l4.353 4.354A1.5 1.5 0 0 0 40 42.293V39h1a5.006 5.006 0 0 0 5-5V22a5.006 5.006 0 0 0-5-5zm-4 9.5h-.559a8.973 8.973 0 0 1-2.661 5.434 6.949 6.949 0 0 0 2.72.566 1.031 1.031 0 0 1 1.036 1 .97.97 0 0 1-.965 1 9.127 9.127 0 0 1-4.551-1.23 8.932 8.932 0 0 1-4.52 1.23 1.031 1.031 0 0 1-1.036-1 .97.97 0 0 1 .965-1 7.128 7.128 0 0 0 2.811-.574 8.855 8.855 0 0 1-1.875-2.573 1 1 0 1 1 1.806-.857 6.974 6.974 0 0 0 1.823 2.352A6.96 6.96 0 0 0 34.42 26.5H27a1 1 0 0 1 0-2h4v-2a1 1 0 0 1 2 0v2h4a1 1 0 0 1 0 2zM16 14.417 14.371 18h2.893c.072-.1.149-.2.227-.3z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path><path d="M25 6H7a5.006 5.006 0 0 0-5 5v12a5.006 5.006 0 0 0 5 5h1v3.293a1.5 1.5 0 0 0 2.561 1.061L14.914 28H16v-6a6.956 6.956 0 0 1 .3-2h-2.838l-1.552 3.414a1 1 0 0 1-1.82-.828l5-11a1 1 0 0 1 1.82 0l2.117 4.657A6.952 6.952 0 0 1 23 15h7v-4a5.006 5.006 0 0 0-5-5z" fill="#ffffff" opacity="1" data-original="#ffffff" class=""></path></g></g></svg>
+    </button> 
 
-    <div class="flex flex-col items-center gap-4 rounded-full bg-white p-2 shadow-lg">
+    <div class="pointer-events-auto absolute bottom-0 left-0 bg-gradient-to-b from-white/[0] via-white to-[#ffffff] sm:relative grid grid-cols-5 sm:flex w-full sm:w-fit sm:flex-col items-center justify-between gap-5 sm:rounded-full sm:bg-white pb-4 pl-4 sm:p-2 shadow-lg">
 
-      <!-- 1 Video Popup -->
-      <button id="videoBtn"
-        class="flex h-8 w-8 items-center justify-center rounded-full bg-[#662f97] text-white hover:scale-110 transition">
-        <i id="playPause1" class="fa-solid fa-video"></i>
-      </button>
-
-      <!-- 2 Play / Pause Music -->
-      <button id="musicControl" class="flex h-8 w-8 items-center justify-center rounded-full bg-[#662f97] text-white hover:scale-110 transition" aria-label="Toggle music">
-        <i id="playPause" class="fa-solid fa-play"></i>
-      </button>
-
-      <!-- 4 Download -->
-      <a href="invitation.pdf" download
-        class="flex h-8 w-8 items-center justify-center rounded-full bg-[#662f97] text-white hover:scale-110 transition">
-        <i class="fa-solid fa-download"></i>
+      <!-- WP button -->
+      <a href="https://wa.me/919371892251" class="flex flex-col gap-3 sm:gap-0 sm:hidden justify-center items-center">
+        <div class="flex h-10 w-10 sm:hidden items-center justify-center rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition"
+          aria-label="Open audio player">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </div>
+        <span class="text-base font-semibold">WhatsApp</span>
+      </a>
+      <!-- Call button -->
+      <a href="tel:919371892251" class="flex flex-col gap-3 sm:gap-0 sm:hidden justify-center items-center">
+        <div class="flex h-10 w-10  items-center justify-center rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition" aria-label="Open audio player">
+          <i class="fa-solid fa-phone text-lg"></i>
+        </div>
+        <span class="text-base font-semibold">Call</span>
       </a>
 
-      <!-- 5 Share -->
-      <div class="relative group">
+      <!-- Video/Audio Popup -->
+      <div class="flex flex-col gap-3 sm:gap-0 justify-center items-center">
+        <button id="audioPlayerBtn"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition"
+          aria-label="Open audio player">
+          <i class="fa-solid fa-compact-disc"></i>
+        </button>
+        <span class="text-base font-semibold sm:hidden">Audio</span>
+      </div>
 
-        <button class="flex h-8 w-8 items-center justify-center rounded-full bg-[#662f97] text-white hover:scale-110 transition">
-          <i class="fa-solid fa-share-nodes"></i>
+      <!-- Play / Pause Music -->
+      <div class="hidden sm:flex flex flex-col justify-center items-center">
+        <button id="musicControl" class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition" aria-label="Toggle music">
+          <!-- <i id="playPause" class="fa-solid fa-play"></i> -->
+          <i id="playPause" class="fa-solid fa-volume-high"></i>
         </button>
         
+      </div>
+
+      <!-- Download -->
+      <div class="flex flex-col gap-3 sm:gap-0 justify-center items-center">
+        <a href="invitation.pdf" download
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition">
+          <i class="fa-solid fa-download"></i>
+        </a>
+        <span class="text-base font-semibold sm:hidden">Invitation</span>
+      </div>
+
+      <!-- Share -->
+      <div class="relative group">
+        <div class="flex flex-col gap-3 sm:gap-0  justify-center items-center">
+          <button class="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-primary)] text-white hover:scale-110 transition">
+            <i class="fa-solid fa-share-nodes"></i>
+          </button>
+          <span class="text-base font-semibold sm:hidden">Share</span>
+        </div>
         <!-- Social Icons -->
-        <div class="absolute right-12 top-1/2 -translate-y-1/2 flex gap-2 
-        opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 
+        <div class="absolute right-16 bottom-24 sm:right-14 sm:top-1/2 sm:-translate-y-[50%] flex flex-col sm:flex-row gap-2 sm:h-fit sm:w-fit opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-100 
         transition-all duration-300"> 
 
           <!-- Facebook -->
+
           <a href="https://facebook.com" target="_blank"
             class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white shadow hover:scale-110">
             <i class="fa-brands fa-facebook-f"></i>
@@ -303,35 +336,39 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
       </div>
     </div>
     
-    <div class="relative bg-[url('./assets/images/theme-bg.png')] bg-[length:100%] bg-repeat-y px-7 py-9">
-      <div class="absolute inset-0 bg-white/50"></div>
-      <div class="mt-2 mb-10">
+    <div class="relative overflow-hidden bg-[url('./assets/images/theme-bg.png')] bg-[length:100%] bg-repeat-y px-4 py-8 sm:px-6 md:px-7 md:py-10">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#f7ecfb70] via-[#f7ecfb70] to-[#f7ecfb70]"></div>
+      <div class="pointer-events-none absolute left-0 top-16 h-40 w-40 rounded-full bg-[#caa4e8]/25 blur-3xl"></div>
+      <div class="pointer-events-none absolute bottom-24 right-0 h-52 w-52 rounded-full bg-[#662f97]/10 blur-3xl"></div>
+      <div class="mt-2 mb-10 rounded-[28px] border border-white/70 bg-white/65 px-5 py-8 text-center shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm">
         <svg class="mx-auto mb-2 block opacity-30" width="30" height="22" viewBox="0 0 30 22" fill="none">
           <path d="M0,15 Q3,2 11,5 Q7,11 9,15 Q7,19 3.5,19 Q0,19 0,15Z" fill="#662f9780"/>
           <path d="M15,15 Q18,2 26,5 Q22,11 24,15 Q22,19 18.5,19 Q15,19 15,15Z" fill="#662f9780"/>
         </svg>
-        <p data-aos="zoom-in" data-aos-duration="500" class="mx-auto mb-2 max-w-[280px] text-[16px] italic leading-[1.75] text-[#62433c]">
+        <p data-aos="zoom-in" data-aos-duration="500" class="mx-auto mb-2 max-w-[380px] text-[17px] italic leading-[1.9] text-[#6b4e63]">
           "Love is patient, love is kind. It does not envy, it does not boast, it is not proud."
         </p>
       </div>
 
-      <div class="mb-6 text-center">
+      <div class="mb-6 rounded-[30px] border border-white/70 bg-white/70 px-5 py-8 text-center shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm">
         
-        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.28em] text-[#62433c]">Meet</p>
-        <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[30px] italic text-[#662f97]">Bride &amp; Groom</h2>
-        <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
-          <span class="h-px w-10 bg-[#662f9760]"></span>
-          <span class="h-2 w-2 rounded-full bg-[#662f9760]"></span>
-          <span class="h-px w-10 bg-[#662f9760]"></span>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Meet</p>
+        <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[34px] italic text-[#662f97]">Bride &amp; Groom</h2>
+        <div class="z-10 relative mx-auto mb-3 mt-6 flex max-w-[170px] items-center justify-center gap-3">
+          <span class="h-px flex-1 bg-gradient-to-r from-transparent via-[#662f97]/40 to-[#662f97]/10"></span>
+          <span class="flex h-9 w-9 items-center justify-center rounded-full border border-[#662f97]/20 bg-[#fff6ff] text-[#662f97]">&hearts;</span>
+          <span class="h-px flex-1 bg-gradient-to-l from-transparent via-[#662f97]/40 to-[#662f97]/10"></span>
         </div>
-        <p data-aos="zoom-in" class="mx-auto mt-2 max-w-[300px] text-[16px] leading-[1.7] text-[#62433c]">
+        <p data-aos="zoom-in" class="mx-auto mt-4 max-w-[420px] text-[15px] leading-[1.9] text-[#6b4e63]">
           Please join us as we celebrate the beginning of their beautiful journey together
         </p>
       </div>
 
-      <div class="mb-6 text-center">
-        <div data-aos="zoom-in" data-aos-duration="1000" class="relative mb-5 inline-block">
-          <div class=" relative mx-auto h-60 w-60 md:h-48 md:w-48 lg:h-80 lg:w-80 overflow-hidden">
+      <div class="group relative mb-6 overflow-hidden rounded-[30px] border border-[#662f97]/10 bg-gradient-to-br from-white via-[#fffafc] to-[#f8eefc] px-5 py-6 text-center shadow-[0_18px_48px_rgba(102,47,151,0.08)]">
+        
+       <div class="flex flex-col justify-center items-center">
+         <div data-aos="zoom-in" data-aos-duration="1000" class="relative mb-5 inline-flex rounded-[32px] border border-white bg-white/80 p-3 shadow-[0_10px_30px_rgba(102,47,151,0.08)]">
+          <div class=" relative mx-auto h-60 w-60 overflow-hidden md:h-48 md:w-48 lg:h-80 lg:w-80">
              <div data-aos="zoom-out" data-aos-duration="1000" class="h-full w-full aos-init aos-animate" style="
                   background-image: url('assets/images/groom.png');
                   background-size: cover;
@@ -346,81 +383,83 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
                 
           </div>
         </div>
-        <h3 data-aos="zoom-in" data-aos-duration="1000" class="mb-[2px] font-script text-[28px] text-[#662f97]">Sameer Satish Rana</h3>
-        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-[3px] text-[16px] uppercase tracking-[0.18em] text-[#62433c]">Son of</p>
-        <p data-aos="zoom-in" data-aos-duration="1000" class="text-[16px] text-[#62433c]">Mr. Satish Sharma &amp; Mrs. Priya Rana</p>
-        <p data-aos="zoom-in" data-aos-duration="1000" class="mt-[2px] text-[16px] text-[#62433c]">Shiv Shakti Colony, Srinagar</p>
+        <span class="mb-3 inline-flex rounded-full border border-[#662f97]/15 bg-[#662f97]/[0.06] px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.34em] text-[#662f97]">The Groom</span>
+        <h3 data-aos="zoom-in" data-aos-duration="1000" class="mb-2 font-script text-[32px] text-[#662f97]">
+          Sameer Satish Rana</h3>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[12px] uppercase tracking-[0.34em] text-[#8b6c83]">Son of</p>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="text-[15px] leading-[1.8] text-[#6b4e63]">Mr. Satish Sharma &amp; Mrs. Priya Rana</p>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="mt-1 text-[15px] text-[#7c5c74]">Shiv Shakti Colony, Srinagar</p>
         <div data-aos="zoom-in" data-aos-duration="1000" class="mt-2">
-          <span class="inline-flex rounded-full border border-[#662f97]/55 p-3 font-serif text-[16px] tracking-[0.1em] text-[#662f97] transition hover:bg-[#662f97] hover:text-white"><i class="fab fa-instagram"></i></span>
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#662f97]/25 bg-white text-[#662f97] shadow-[0_10px_20px_rgba(102,47,151,0.08)] transition hover:-translate-y-1 hover:bg-[#662f97] hover:text-white"><i class="fab fa-instagram"></i></span>
         </div>
+       </div>
       </div>
 
-      <div data-aos="zoom-in" data-aos-duration="1000" class="mx-auto my-1 flex max-w-[110px] items-center gap-[10px] text-[#662f97] before:h-px before:flex-1 before:bg-[#662f9760] before:content-[''] after:h-px after:flex-1 after:bg-gold/30 after:content-['']">
-        <span class="font-script text-[32px] text-[#662f97]">&amp;</span>
+      <div data-aos="zoom-in" data-aos-duration="1000" class="mx-auto my-4 flex h-20 w-20 items-center justify-center rounded-full border border-[#662f97]/15 bg-white/80 shadow-[0_15px_35px_rgba(102,47,151,0.08)]">
+        <span class="flex h-14 w-14 items-center justify-center rounded-full bg-[#662f97]/10 font-script text-[34px] text-[#662f97]">&amp;</span>
       </div>
 
-      <div class="mt-5 mb-8 text-center">
-        <div data-aos="zoom-in" data-aos-duration="1000" class="relative mb-3 inline-block">
-          <div class="mx-auto h-56 w-56  md:h-48 md:w-48 lg:h-80 lg:w-80 overflow-hidden">
-            <div data-aos="zoom-out" data-aos-duration="1000" class="h-full w-full aos-init aos-animate" style="
-                  background-image: url('assets/images/bride-image.jpg');
-                  background-size: cover;
-                  -webkit-mask-image: url('assets/images/photo-shape.png');
-                  -webkit-mask-repeat: no-repeat;
-                  -webkit-mask-size: contain;
-                  -webkit-mask-position: center;
-                  mask-image: url('assets/images/photo-shape.png');
-                  mask-repeat: no-repeat;
-                  mask-size: contain;
-                  mask-position: center;"></div>
-          </div>
+      <div class="relative rounded-[30px] border border-white/70 bg-white/70 px-5 py-8 shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm sm:px-7 mb-6">
+        <div class="flex flex-col justify-center items-center">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="relative mb-3 inline-flex rounded-[32px] border border-white bg-white/80 p-3 shadow-[0_10px_30px_rgba(102,47,151,0.08)]">
+            <div class="mx-auto h-56 w-56  md:h-48 md:w-48 lg:h-80 lg:w-80 overflow-hidden">
+              <div data-aos="zoom-out" data-aos-duration="1000" class="h-full w-full aos-init aos-animate" style="
+                    background-image: url('assets/images/bride-image.jpg');
+                    background-size: cover;
+                    -webkit-mask-image: url('assets/images/photo-shape.png');
+                    -webkit-mask-repeat: no-repeat;
+                    -webkit-mask-size: contain;
+                    -webkit-mask-position: center;
+                    mask-image: url('assets/images/photo-shape.png');
+                    mask-repeat: no-repeat;
+                    mask-size: contain;
+                    mask-position: center;"></div>
+            </div>
         </div>
-        <h3 data-aos="zoom-in" data-aos-duration="1000" class="mb-[2px] font-script text-[28px] text-[#662f97]">Mehak Pradeep Dhar</h3>
-        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-[3px] text-[16px] uppercase tracking-[0.18em] text-[#62433c]">Daughter of</p>
-        <p data-aos="zoom-in" data-aos-duration="1000" class="text-[16px] text-[#62433c]">Mr. Pradeep Dhar &amp; Mrs. Sunita Dhar</p>
-        <p data-aos="zoom-in" data-aos-duration="1000" class="mt-[2px] text-[16px] text-[#62433c]">Shiv Shakti Colony, Srinagar</p>
+        <span class="relative z-10 mb-3 inline-flex rounded-full border border-[#662f97]/15 bg-[#662f97]/[0.06] px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.34em] text-[#662f97]">The Bride</span>
+        <h3 data-aos="zoom-in" data-aos-duration="1000" class="mb-2 font-script text-[32px] text-[#662f97]">Mehak Pradeep Dhar</h3>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[12px] uppercase tracking-[0.34em] text-[#8b6c83]">Daughter of</p>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="text-[15px] leading-[1.8] text-[#6b4e63]">Mr. Pradeep Dhar &amp; Mrs. Sunita Dhar</p>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="mt-1 text-[15px] text-[#7c5c74]">Shiv Shakti Colony, Srinagar</p>
         <div data-aos="zoom-in" data-aos-duration="1000" class="mt-2">
-          <span class="inline-flex rounded-full border border-[#662f97]/55 p-3 font-serif text-[16px] tracking-[0.1em] text-[#662f97] transition hover:bg-[#662f97] hover:text-white"><i class="fab fa-instagram"></i></span>
+          <span class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#662f97]/25 bg-white text-[#662f97] shadow-[0_10px_20px_rgba(102,47,151,0.08)] transition hover:-translate-y-1 hover:bg-[#662f97] hover:text-white"><i class="fab fa-instagram"></i></span>
+        </div>
         </div>
       </div>
 
-      <div class="bg-parch/[0.90] shadow-sm rounded-md px-7 py-8 text-center">
+      <div class="overflow-hidden relative rounded-[30px] border border-[#662f97]/10 bg-gradient-to-br from-white via-[#fffafc] to-[#f8eefc] px-5 py-6 text-center shadow-[0_18px_48px_rgba(102,47,151,0.08)] mb-6">
         
-        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-4 text-[16px] uppercase tracking-[0.25em] text-[#62433c]">Counting Down To <br> The Big Day</p>
+        <p data-aos="zoom-in" data-aos-duration="1000" class="mb-3 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Counting Down</p>
+        <h2 class="font-display text-[30px] italic text-[#662f97]">To The Big Day</h2>
         
-        <div class="relative z-10 mb-3 flex items-center justify-center gap-2">
-            <span class="h-px w-10 bg-[#662f9760]"></span>
-            <span class="h-2 w-2 rounded-full bg-[#662f9760]"></span>
-            <span class="h-px w-10 bg-[#662f9760]"></span>
-        </div>
-        <div class="countdown flex flex-wrap justify-center gap-[10px]" data-date="2027-05-08T08:00:00+07:00">
-          <div data-aos="zoom-in" data-aos-duration="1000" class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
-            <span data-unit="days" class="block font-display text-[28px] font-semibold text-[#662f97]">00</span>
-            <span class="text-[16px] uppercase tracking-[0.18em] text-[#62433c]">Days</span>
+        <div class="countdown mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4" data-date="2027-05-08T08:00:00+07:00">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[24px] border border-white/70 bg-white/85 px-4 py-5 text-center shadow-[0_14px_30px_rgba(102,47,151,0.08)]">
+            <span data-unit="days" class="block font-display text-[34px] font-semibold text-[#662f97]">00</span>
+            <span class="mt-1 block text-[12px] uppercase tracking-[0.34em] text-[#7c5c74]">Days</span>
           </div>
-          <div data-aos="zoom-in" data-aos-duration="1400" class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
-            <span data-unit="hours" class="block font-display text-[28px] font-semibold text-[#662f97]">00</span>
-            <span class="text-[16px] uppercase tracking-[0.18em] text-[#62433c]">Hours</span>
+          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[24px] border border-white/70 bg-white/85 px-4 py-5 text-center shadow-[0_14px_30px_rgba(102,47,151,0.08)]">
+            <span data-unit="hours" class="block font-display text-[34px] font-semibold text-[#662f97]">00</span>
+            <span class="mt-1 block text-[12px] uppercase tracking-[0.34em] text-[#7c5c74]">Hours</span>
           </div>
-          <div data-aos="zoom-in" data-aos-duration="1200" class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
-            <span data-unit="minutes" class="block font-display text-[28px] font-semibold text-[#662f97]">00</span>
-            <span class="text-[16px] uppercase tracking-[0.18em] text-[#62433c]">Mins</span>
+          <div data-aos="zoom-in" data-aos-duration="1200" class="rounded-[24px] border border-white/70 bg-white/85 px-4 py-5 text-center shadow-[0_14px_30px_rgba(102,47,151,0.08)]">
+            <span data-unit="minutes" class="block font-display text-[34px] font-semibold text-[#662f97]">00</span>
+            <span class="mt-1 block text-[12px] uppercase tracking-[0.34em] text-[#7c5c74]">Mins</span>
           </div>
-          <div data-aos="zoom-in" data-aos-duration="1600" class="min-w-[62px] rounded-[12px] border border-[#c9a96e]/[.28] bg-white px-4 py-3 text-center">
-            <span data-unit="seconds" class="block font-display text-[28px] font-semibold text-[#662f97]">00</span>
-            <span class="text-[16px] uppercase tracking-[0.18em] text-[#62433c]">Secs</span>
+          <div data-aos="zoom-in" data-aos-duration="1600" class="rounded-[24px] border border-white/70 bg-white/85 px-4 py-5 text-center shadow-[0_14px_30px_rgba(102,47,151,0.08)]">
+            <span data-unit="seconds" class="block font-display text-[34px] font-semibold text-[#662f97]">00</span>
+            <span class="mt-1 block text-[12px] uppercase tracking-[0.34em] text-[#7c5c74]">Secs</span>
           </div>
         </div>
-        <button data-aos="zoom-in" data-aos-duration="2000" class="mt-5 rounded-full bg-[#662f97] px-[26px] py-[9px] font-serif text-[16px] tracking-[0.2em] text-white transition hover:-translate-y-0.5 hover:bg-[#662f97]-d hover:shadow-[0_6px_20px_rgba(231,0,127,0.3)]">
+        <button data-aos="zoom-in" data-aos-duration="2000" class="mt-7 rounded-full bg-[#662f97] px-8 py-3 font-serif text-[15px] tracking-[0.26em] text-white shadow-[0_14px_30px_rgba(102,47,151,0.28)] transition hover:-translate-y-0.5 hover:bg-[#53257b]">
           Save The Date
         </button>
       </div>
 
-      <div class=" px-7 py-9">
+      <div class="relative rounded-[30px] border border-white/70 bg-white/70 px-5 py-8 shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm sm:px-7 mb-6">
         <div class="mb-5 text-center">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.26em] text-[#62433c]">Plan Your Visit</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[24px] italic text-[#662f97]">Scheduled</h2>
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mt-[6px] max-w-[260px] text-[16px] leading-[1.7] text-[#62433c]">
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Plan Your Visit</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[32px] italic text-[#662f97]">Scheduled</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mt-4 max-w-[420px] text-[15px] leading-[1.8] text-[#6b4e63]">
             Celebrate the following events along with us and help us make this time truly special
           </p>
           <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
@@ -431,12 +470,12 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
   
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[28px] border border-[#662f97]/10 bg-gradient-to-br from-white to-[#fbf4ff] px-5 py-5 shadow-[0_14px_38px_rgba(102,47,151,0.07)] transition duration-300 hover:-translate-y-[3px]">
             <p class="mb-1 text-[14px] uppercase tracking-[0.16em] text-[#62433c]">09 May 2027 · 7 PM</p>
             <h3 class="mb-1 font-script text-[24px] text-[#662f97]">Sangeet</h3>
             <p class="text-[16px] text-warm">Shankracharya Hill Resort, Srinagar</p>
           </div>
-          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[28px] border border-[#662f97]/10 bg-gradient-to-br from-white to-[#fbf4ff] px-5 py-5 shadow-[0_14px_38px_rgba(102,47,151,0.07)] transition duration-300 hover:-translate-y-[3px]">
             <p class="mb-1 text-[14px] uppercase tracking-[0.16em] text-[#62433c]">09 May 2027 · 11 PM</p>
             <h3 class="mb-1 font-script text-[24px] text-[#662f97]">Haldi</h3>
             <p class="text-[16px] text-warm">At Groom's Residence, Srinagar</p>
@@ -444,12 +483,12 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
       </div>
       
-      <div class="bg-parch/[0.90] shadow-sm rounded-md px-7 py-9">
+      <div class="relative overflow-hidden rounded-[30px] border border-[#662f97]/10 bg-gradient-to-br from-white via-[#fffafc] to-[#f8eefc] px-5 py-6 text-center shadow-[0_18px_48px_rgba(102,47,151,0.08)] mb-6">
         <div class="mb-5 text-center">
           
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.26em] text-[#62433c]">Join Us</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[24px] italic text-[#662f97]">Wedding Event</h2>
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mt-[6px] max-w-[260px] text-[16px] leading-[1.7] text-[#62433c]">We gladly invite you to be a part of our special day</p>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Join Us</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[32px] italic text-[#662f97]">Wedding Event</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mx-auto mt-4 max-w-[420px] text-[15px] leading-[1.8] text-[#6b4e63]">We gladly invite you to be a part of our special day</p>
          <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
           <span class="h-px w-10 bg-[#662f9760]"></span>
           <span class="h-2 w-2 rounded-full bg-[#662f9760]"></span>
@@ -458,7 +497,7 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
   
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[30px] border border-white/70 bg-white/85 px-5 py-6 text-center shadow-[0_16px_40px_rgba(102,47,151,0.08)] transition duration-300 hover:-translate-y-[3px]">
             <p class="mb-[6px] text-[16px] uppercase tracking-[0.15em] text-[#62433c]">Wedding Ceremony</p>
             <h3 class="mb-[6px] font-script text-[21px] text-[#662f97]">Holy Matrimony</h3>
             <div class="mx-auto mb-2 h-px w-7 bg-gold/40"></div>
@@ -469,7 +508,7 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
             </a>
           </div>
   
-          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-4 py-[18px] text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[30px] border border-white/70 bg-white/85 px-5 py-6 text-center shadow-[0_16px_40px_rgba(102,47,151,0.08)] transition duration-300 hover:-translate-y-[3px]">
             <p class="mb-[6px] text-[16px] uppercase tracking-[0.15em] text-[#62433c]">Reception</p>
             <h3 class="mb-[6px] font-script text-[21px] text-[#662f97]">Wedding Reception</h3>
             <div class="mx-auto mb-2 h-px w-7 bg-gold/40"></div>
@@ -482,10 +521,10 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
       </div>
       
-      <div class="px-7 py-9">
+      <div class="relative rounded-[30px] border border-white/70 bg-white/70 px-5 py-8 shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm sm:px-7 mb-6">
         <div class="mb-[18px] text-center">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.26em] text-[#62433c]">Our Journey</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[24px] italic text-[#662f97]">Our Memories</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Our Journey</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[32px] italic text-[#662f97]">Our Memories</h2>
   
           <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
             <span class="h-px w-10 bg-[#662f9760]"></span>
@@ -496,31 +535,31 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
   
         <div data-aos="fade-in" data-aos-duration="1000" class="relative z-10 mt-6 grid grid-cols-2 gap-3 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
-          <a class="gal-item" href="./assets/images/gallery-3.jpg" data-fancybox="gallery">
-            <img src="./assets/images/gallery-3.jpg" class="h-28 w-full rounded-lg object-cover md:h-full" loading="lazy" alt="Memory 1">
+          <a class="gal-item group relative overflow-hidden rounded-[22px]" href="./assets/images/gallery-3.jpg" data-fancybox="gallery">
+            <img src="./assets/images/gallery-3.jpg" class="h-32 w-full object-cover transition duration-500 group-hover:scale-110 md:h-44" loading="lazy" alt="Memory 1">
           </a>
-          <a class="gal-item" href="./assets/images/gallery-4.jpeg" data-fancybox="gallery">
-            <img src="./assets/images/gallery-4.jpeg" class="h-28 w-full rounded-lg object-cover md:h-full" loading="lazy" alt="Memory 2">
+          <a class="gal-item group relative overflow-hidden rounded-[22px]" href="./assets/images/gallery-4.jpeg" data-fancybox="gallery">
+            <img src="./assets/images/gallery-4.jpeg" class="h-32 w-full object-cover transition duration-500 group-hover:scale-110 md:h-44" loading="lazy" alt="Memory 2">
           </a>
-          <a class="gal-item" href="./assets/images/gallery-5.jpeg" data-fancybox="gallery">
-            <img src="./assets/images/gallery-5.jpeg" class="h-28 w-full rounded-lg object-cover md:h-full" loading="lazy" alt="Memory 3">
+          <a class="gal-item group relative overflow-hidden rounded-[22px]" href="./assets/images/gallery-5.jpeg" data-fancybox="gallery">
+            <img src="./assets/images/gallery-5.jpeg" class="h-32 w-full object-cover transition duration-500 group-hover:scale-110 md:h-44" loading="lazy" alt="Memory 3">
           </a>
-          <a class="gal-item" href="./assets/images/gallery-6.jpeg" data-fancybox="gallery">
-            <img src="./assets/images/gallery-6.jpeg" class="h-28 w-full rounded-lg object-cover md:h-full" loading="lazy" alt="Memory 4">
+          <a class="gal-item group relative overflow-hidden rounded-[22px]" href="./assets/images/gallery-6.jpeg" data-fancybox="gallery">
+            <img src="./assets/images/gallery-6.jpeg" class="h-32 w-full object-cover transition duration-500 group-hover:scale-110 md:h-44" loading="lazy" alt="Memory 4">
           </a>
-          <a class="gal-item" href="./assets/images/gallery-1.jpeg" data-fancybox="gallery">
-            <img src="./assets/images/gallery-1.jpeg" class="h-28 w-full rounded-lg object-cover md:h-full" loading="lazy" alt="Memory 5">
+          <a class="gal-item group relative overflow-hidden rounded-[22px]" href="./assets/images/gallery-1.jpeg" data-fancybox="gallery">
+            <img src="./assets/images/gallery-1.jpeg" class="h-32 w-full object-cover transition duration-500 group-hover:scale-110 md:h-44" loading="lazy" alt="Memory 5">
           </a>
-          <a class="gal-item" href="./assets/images/gallery-2.jpeg" data-fancybox="gallery">
-            <img src="./assets/images/gallery-2.jpeg" class="h-28 w-full rounded-lg object-cover md:h-full" loading="lazy" alt="Memory 6">
+          <a class="gal-item group relative overflow-hidden rounded-[22px]" href="./assets/images/gallery-2.jpeg" data-fancybox="gallery">
+            <img src="./assets/images/gallery-2.jpeg" class="h-32 w-full object-cover transition duration-500 group-hover:scale-110 md:h-44" loading="lazy" alt="Memory 6">
           </a>
         </div>
       </div>
       
-      <div class="relative overflow-hidden bg-parch/[0.90] shadow-sm rounded-md px-7 py-9">
+      <div class="relative overflow-hidden rounded-[30px] border border-[#662f97]/10 bg-gradient-to-br from-white via-[#fffafc] to-[#f8eefc] px-5 py-6 text-center shadow-[0_18px_48px_rgba(102,47,151,0.08)] mb-6">
         <div class="mb-5 text-center">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.26em] text-[#62433c]">Share Your Love</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[24px] italic text-[#662f97]">Wedding Wishes</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Share Your Love</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[32px] italic text-[#662f97]">Wedding Wishes</h2>
           <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
             <span class="h-px w-10 bg-[#662f9760]"></span>
             <span class="h-2 w-2 rounded-full bg-[#662f9760]"></span>
@@ -528,39 +567,39 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
           </div>
         </div>
   
-        <div class="mx-auto grid max-w-[1200px] align-item:self-start grid-cols-1 gap-3 md:grid-cols-1 align-items: self-start;">
-          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[14px] border border-[#62433c]/[.22] bg-white p-[18px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
-            <p  class="mb-[14px] text-center text-[16px] text-warm">Leave your wishes</p>
+        <div class="mx-auto grid max-w-[1200px] grid-cols-1 gap-3">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[28px] border border-white/70 bg-white/90 p-5 shadow-[0_16px_40px_rgba(102,47,151,0.08)] transition duration-300 hover:-translate-y-[3px]">
+            <p  class="mb-5 text-center text-[12px] uppercase tracking-[0.34em] text-[#7c5c74]">Leave your wishes</p>
             <div class="flex flex-col gap-[9px]">
-              <input type="text" placeholder="Name" class="w-full rounded-lg border border-[#62433c]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#62433c30] focus:border-[#662f9760] focus:shadow-[0_0_0_3px_rgba(231,0,127,0.12)]"/>
-              <input type="email" placeholder="Email" class="w-full rounded-lg border border-[#62433c]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#62433c30] focus:border-[#662f9760] focus:shadow-[0_0_0_3px_rgba(231,0,127,0.12)]"/>
-              <textarea placeholder="Your wish..." rows="3" class="w-full resize-none rounded-lg border border-[#62433c]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#62433c30] focus:border-[#662f9760] focus:shadow-[0_0_0_3px_rgba(231,0,127,0.12)]"></textarea>
-              <button class="rounded-full bg-[#662f97] px-[34px] py-2 font-serif text-[16px] tracking-[0.16em] text-white transition hover:-translate-y-0.5 hover:bg-[#662f97]-d hover:shadow-[0_6px_20px_rgba(231,0,127,0.3)]">Send</button>
+              <input type="text" placeholder="Name" class="w-full rounded-2xl border border-[#662f97]/15 bg-[#fcf9ff] px-[14px] py-[12px] text-[15px] text-[#6b4e63] outline-none transition placeholder:text-[#a58ca6] focus:border-[#662f97]/40 focus:bg-white focus:shadow-[0_0_0_3px_rgba(102,47,151,0.08)]"/>
+              <input type="email" placeholder="Email" class="w-full rounded-2xl border border-[#662f97]/15 bg-[#fcf9ff] px-[14px] py-[12px] text-[15px] text-[#6b4e63] outline-none transition placeholder:text-[#a58ca6] focus:border-[#662f97]/40 focus:bg-white focus:shadow-[0_0_0_3px_rgba(102,47,151,0.08)]"/>
+              <textarea placeholder="Your wish..." rows="3" class="w-full resize-none rounded-2xl border border-[#662f97]/15 bg-[#fcf9ff] px-[14px] py-[12px] text-[15px] text-[#6b4e63] outline-none transition placeholder:text-[#a58ca6] focus:border-[#662f97]/40 focus:bg-white focus:shadow-[0_0_0_3px_rgba(102,47,151,0.08)]"></textarea>
+              <button class="rounded-full bg-[#662f97] px-[34px] py-3 font-serif text-[14px] tracking-[0.2em] text-white shadow-[0_14px_30px_rgba(102,47,151,0.25)] transition hover:-translate-y-0.5 hover:bg-[#53257b]">Send</button>
             </div>
           </div>
   
-          <div data-aos="zoom-in" data-aos-duration="1000" id="wishes_wrapper" class="self-start space-y-4 h-[350px] overflow-y-auto pr-2">
-            <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+          <div data-aos="zoom-in" data-aos-duration="1000" id="wishes_wrapper" class="self-start space-y-4 h-[380px] overflow-y-auto rounded-[28px] border border-white/70 bg-white/65 p-3 shadow-[0_16px_40px_rgba(102,47,151,0.06)]">
+            <article class="rounded-[24px] border border-[#662f97]/10 bg-white/95 px-5 py-[1.1rem] shadow-[0_10px_26px_rgba(102,47,151,0.06)]">
               <strong class="mb-1 block">Nilesh</strong>
               <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#662f97]">Jakarta</span>
               <p>Congratulations on starting a new life together. May you always support each other and be filled with happiness.</p>
             </article>
-            <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <article class="rounded-[24px] border border-[#662f97]/10 bg-white/95 px-5 py-[1.1rem] shadow-[0_10px_26px_rgba(102,47,151,0.06)]">
               <strong class="mb-1 block">Aditya</strong>
               <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#662f97]">Bandung</span>
               <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
             </article>
-            <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <article class="rounded-[24px] border border-[#662f97]/10 bg-white/95 px-5 py-[1.1rem] shadow-[0_10px_26px_rgba(102,47,151,0.06)]">
               <strong class="mb-1 block">Aditya</strong>
               <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#662f97]">Bandung</span>
               <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
             </article>
-            <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <article class="rounded-[24px] border border-[#662f97]/10 bg-white/95 px-5 py-[1.1rem] shadow-[0_10px_26px_rgba(102,47,151,0.06)]">
               <strong class="mb-1 block">Aditya</strong>
               <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#662f97]">Bandung</span>
               <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
             </article>
-            <article class="rounded-3xl bg-white/95 px-5 py-[1.1rem] shadow-[0_0_4px_rgba(85,57,45,0.12)]">
+            <article class="rounded-[24px] border border-[#662f97]/10 bg-white/95 px-5 py-[1.1rem] shadow-[0_10px_26px_rgba(102,47,151,0.06)]">
               <strong class="mb-1 block">Aditya</strong>
               <span class="mb-[0.65rem] inline-block text-[0.92rem] text-[#662f97]">Bandung</span>
               <p>Happy wedding to both of you. May everything go smoothly until the wedding day and may you always stay happy.</p>
@@ -569,15 +608,15 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
       </div>
       
-      <div class="relative px-7 py-9">
+      <div class="relative rounded-[30px] border border-white/70 bg-white/70 px-5 py-8 shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm sm:px-7 mb-6">
         <svg class="absolute right-2 top-2 w-[75px] opacity-[.18]" viewBox="0 0 90 90" fill="none">
           <path d="M85,5 Q48,48 28,68 Q58,48 78,85" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
           <ellipse cx="48" cy="48" rx="9" ry="4.5" fill="#e8c4bc" opacity=".5" transform="rotate(22 48 48)"/>
         </svg>
         <div class="mb-5 text-center">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.26em] text-[#62433c]">Can't Make It?</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[24px] italic text-[#662f97]">Join Us Virtually</h2>
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mt-[5px] text-[16px] leading-[1.7] text-[#62433c]">Celebrate with us from wherever you are</p>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Can't Make It?</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[32px] italic text-[#662f97]">Join Us Virtually</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mt-4 text-[15px] leading-[1.8] text-[#6b4e63]">Celebrate with us from wherever you are</p>
           <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
             <span class="h-px w-10 bg-[#662f9760]"></span>
             <span class="h-2 w-2 rounded-full bg-[#662f9760]"></span>
@@ -586,7 +625,7 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
   
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-[14px] py-5 text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[28px] border border-[#662f97]/10 bg-gradient-to-br from-white to-[#fbf4ff] px-[18px] py-6 text-center shadow-[0_14px_38px_rgba(102,47,151,0.07)] transition duration-300 hover:-translate-y-[3px]">
             <div class="mx-auto mb-[10px] flex h-[38px] w-[38px] items-center justify-center rounded-full bg-gold/10">
               <svg width="18" height="18" fill="none" stroke="#c9a96e" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
             </div>
@@ -598,7 +637,7 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
             </a>
           </div>
   
-          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[14px] border border-[#c9a96e]/[.22] bg-white px-[14px] py-5 text-center transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+          <div data-aos="zoom-in" data-aos-duration="1400" class="rounded-[28px] border border-[#662f97]/10 bg-gradient-to-br from-white to-[#fbf4ff] px-[18px] py-6 text-center shadow-[0_14px_38px_rgba(102,47,151,0.07)] transition duration-300 hover:-translate-y-[3px]">
             <div class="mx-auto mb-[10px] flex h-[38px] w-[38px] items-center justify-center rounded-full bg-blush/20">
               <svg width="18" height="18" fill="none" stroke="#c9948a" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
             </div>
@@ -612,22 +651,22 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
       </div>
       
-      <div id="rsvp" class="relative bg-parch/[0.90] shadow-sm rounded-md px-7 py-9">
+      <div id="rsvp" class="relative overflow-hidden rounded-[30px] border border-[#662f97]/10 bg-gradient-to-br from-white via-[#fffafc] to-[#f8eefc] px-5 py-6 text-center shadow-[0_18px_48px_rgba(102,47,151,0.08)] mb-6">
         <svg class="absolute left-2 top-2 w-[75px] opacity-[.18]" viewBox="0 0 90 90" fill="none">
           <path d="M5,5 Q42,42 62,62 Q38,42 22,85" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
           <ellipse cx="42" cy="42" rx="9" ry="4.5" fill="#e8c4bc" opacity=".5" transform="rotate(-22 42 42)"/>
         </svg>
         <div class="mb-5 text-center">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-1 text-[16px] uppercase tracking-[0.26em] text-[#62433c]">Will You Join Us?</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[30px] italic text-[#662f97]">RSVP</h2>
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mt-[3px] text-[16px] text-[#62433c]">Please confirm your attendance by 01 May 2027</p>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">Will You Join Us?</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="font-display text-[34px] italic text-[#662f97]">RSVP</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mt-4 text-[15px] leading-[1.8] text-[#6b4e63]">Please confirm your attendance by 01 May 2027</p>
           <div class="z-10 relative mb-3 mt-10 flex items-center justify-center gap-2">
             <span class="h-px w-10 bg-[#662f9760]"></span>
             <span class="h-2 w-2 rounded-full bg-[#662f9760]"></span>
             <span class="h-px w-10 bg-[#662f9760]"></span>
           </div>
         </div>
-        <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[14px] border border-[#62433c]/[.22] bg-white px-[18px] py-[22px] transition duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_32px_rgba(139,115,85,0.11)]">
+        <div data-aos="zoom-in" data-aos-duration="1000" class="rounded-[30px] border border-white/80 bg-white/90 px-[18px] py-[22px] shadow-[0_18px_45px_rgba(102,47,151,0.08)] transition duration-300 hover:-translate-y-[3px] sm:p-6">
           <div class="flex flex-col gap-[11px]">
             <input type="text" placeholder="Your Full Name" class="w-full rounded-lg border border-[#62433c]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#62433c30] focus:border-gold focus:shadow-[0_0_0_3px_rgba(231,0,127,0.12)]"/>
             <input type="email" placeholder="Email Address" class="w-full rounded-lg border border-[#62433c]/[.36] bg-white px-[14px] py-[10px] text-[16px] text-warm outline-none transition placeholder:text-[#62433c30] focus:border-gold focus:shadow-[0_0_0_3px_rgba(231,0,127,0.12)]"/>
@@ -677,7 +716,7 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
       </div>
    
-      <div class="relative overflow-hidden px-7 pb-9 pt-10 text-center">
+      <div class="relative overflow-hidden rounded-[30px] border border-white/70 bg-white/75 px-5 pb-9 pt-10 text-center shadow-[0_20px_60px_rgba(102,47,151,0.08)] backdrop-blur-sm sm:px-7 mb-6">
         
         <svg class="absolute bottom-0 left-0 w-[90px] opacity-[.18]" viewBox="0 0 90 90" fill="none">
           <path d="M5,85 Q38,52 62,38 Q46,66 84,12" stroke="#c9a96e" stroke-width="1.5" fill="none"/>
@@ -689,8 +728,8 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </svg>
   
         <div class="relative z-[1]">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-[10px] text-[16px] uppercase tracking-[0.26em] text-[#62433c]">With Love &amp; Gratitude</p>
-          <h2 data-aos="zoom-in" data-aos-duration="1000" class="mb-[10px] font-script text-[42px] text-[#662f97]">Sameer &amp; Mehak</h2>
+          <p data-aos="zoom-in" data-aos-duration="1000" class="mb-2 text-[13px] uppercase tracking-[0.38em] text-[#7c5c74]">With Love &amp; Gratitude</p>
+          <h2 data-aos="zoom-in" data-aos-duration="1000" class="mb-[10px] font-script text-[46px] text-[#662f97]">Sameer &amp; Mehak</h2>
           <div class="mx-auto mb-4 flex max-w-[125px] items-center gap-[10px] text-[#662f97] before:h-px before:flex-1 before:bg-[#662f9760] before:content-[''] after:h-px after:flex-1 after:bg-[#662f9760] after:content-['']">
             <svg width="11" height="11" viewBox="0 0 11 11"><path d="M5.5,1 L6.8,4.5 L10.5,4.5 L7.5,6.8 L8.5,10.5 L5.5,8.2 L2.5,10.5 L3.5,6.8 L.5,4.5 L4.2,4.5 Z" fill="#662f9760" opacity="1"/></svg>
           </div>
@@ -710,26 +749,26 @@ class="fixed inset-0 bg-black/70 hidden items-center justify-center z-[999]">
         </div>
       </div>
       
-      <footer id="mainFooter" class="bg-parch/[0.90] shadow-sm rounded-md px-4 py-5 flex flex-col gap-2 text-center text-sm text-ink justify-center items-center">
-          <p data-aos="zoom-in" data-aos-duration="1000" class="text-[#662f97]">Designed by</p>
-          <h4 data-aos="zoom-in" data-aos-duration="1000" class="inline-flex w-fit items-center justify-center gap-3 pb-2 text-[#662f97]">
+      <footer id="mainFooter" class="rounded-[28px] border border-[#662f97]/10 bg-gradient-to-br from-white via-[#fffafc] to-[#f8eefc] px-5 py-6 flex flex-col gap-2 text-center text-sm text-ink justify-center items-center shadow-[0_18px_48px_rgba(102,47,151,0.08)] backdrop-blur-sm">
+          <p data-aos="zoom-in" data-aos-duration="1000" class="text-[12px] uppercase tracking-[0.34em] text-[#7c5c74]">Designed by</p>
+          <h4 data-aos="zoom-in" data-aos-duration="1000" class="inline-flex w-fit items-center justify-center gap-3 pb-2 text-[20px] text-[#662f97]">
             <a href="https://www.instagram.com/vivahub1">
               Mehak Design Studio 
               <i class="fab fa-instagram "></i>
             </a>
           </h4>
-          <img data-aos="zoom-in" data-aos-duration="1000" src="assets/images/logo.webp" class="w-44 object-cover" alt="logo">
-          <div class="relative z-10 inline-flex gap-4 items-center justify-center mt-2">
+          <img data-aos="zoom-in" data-aos-duration="1000" src="assets/images/logo.webp" class="mt-4 w-40 object-cover" alt="logo">
+          <div class="relative z-10 inline-flex gap-3 items-center justify-center mt-4">
             
-            <a href="https://www.instagram.com/vivahub1" class="p-2 flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#662f97]/40 text-[#662f97] transition hover:bg-[#662f97] hover:text-white" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/vivahub1" class="flex h-11 w-11 items-center justify-center rounded-full border border-[#662f97]/25 bg-white text-[#662f97] shadow-[0_10px_20px_rgba(102,47,151,0.08)] transition hover:bg-[#662f97] hover:text-white" target="_blank" rel="noopener noreferrer">
               <i class=" fab fa-instagram"></i>
             </a>
       
-            <a href="https://wa.me/919371892251" class="p-2 flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#662f97]/40 text-[#662f97] transition hover:bg-[#662f97] hover:text-white" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/919371892251" class="flex h-11 w-11 items-center justify-center rounded-full border border-[#662f97]/25 bg-white text-[#662f97] shadow-[0_10px_20px_rgba(102,47,151,0.08)] transition hover:bg-[#662f97] hover:text-white" target="_blank" rel="noopener noreferrer">
               <i class=" fa-brands fa-whatsapp"></i>
             </a>
       
-            <a href="https://www.vivahub.in/" class="p-2 flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#662f97]/40 text-[#662f97] transition hover:bg-[#662f97] hover:text-white" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.vivahub.in/" class="flex h-11 w-11 items-center justify-center rounded-full border border-[#662f97]/25 bg-white text-[#662f97] shadow-[0_10px_20px_rgba(102,47,151,0.08)] transition hover:bg-[#662f97] hover:text-white" target="_blank" rel="noopener noreferrer">
               <i class=" fa-solid fa-globe"></i>
             </a>
       
